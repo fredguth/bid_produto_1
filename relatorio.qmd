@@ -46,23 +46,35 @@ nameref:
 ---
 
 ## Introdução {#sec-intro}
-O Projeto **Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde** (DESID/MS), é uma iniciativa de 12 meses no âmbito da _Cooperação Técnica BR-T1550_ com o Banco Inter-americano de Desenvolvimento (BID). Seu objetivo maior é fortalecer a capacidade de análise de dados da DESID, integrando técnicas avançadas de ciência de dados e preparando a organização para a adoção de modelos de inteligência artificial.
+O presente projeto é uma iniciativa de 12 meses no âmbito da _Cooperação Técnica BR-T1550_ do Ministério da Saúde com o Banco Inter-americano de Desenvolvimento (BID). Seu objetivo maior é fortalecer a capacidade de análise de dados do Departamento de Economia da Saúde, Investimento e Desempenho (DESID/MS), integrando técnicas avançadas de ciência de dados e preparando a organização para a adoção de modelos de inteligência artificial.
 
 ### Motivação
+
+
+![Sistemas são meios e não fins.](images/pratos.svg){.column-margin .lightbox fig-alt="jogador equilibrando pratos e perdendo gols" width=80% #fig-pratos}
+
 A Coordenação-Geral de Informações em Economia da Saúde (CGES/DESID) é uma área multidiprofissional e interdisciplinar responsável por importantes sistemas de registro de informações econômicas de saúde (SIOPS, BPS e ApuraSUS) e pelo uso desses dados para fornecer evidências econômicas para formulação de políticas, diretrizes e metas para a contínua melhoria do Sistema Único de Saúde (SUS).
 
-A coordenação conta atualmente com reduzida equipe especializada em dados, a maior parte das análises é realizada em planilhas e os processos de ingestão e transformação de dados são _ad-hoc_. 
+> Os sistemas não são fins em si mesmos.  Mais Economia!
+> 
+> --- Gabriel Squeff
+>
 
-Essa necessidade se torna ainda mais crítica com a responsabilidade assumida pela CGES na produção futura do Sistema de Contas de Saúde (SHA), em cooperação com a a Organização para a Cooperação e Desenvolvimento Econômico (OCDE).
+Desde o início de 2023, a CGES tem investido em melhorias para automatizar e reduzir esforços na obtenção dos registros e aumentar a produção de evidências econômicas baseadas na análise de dados. Tais evidências são a missão principal da DESID e subsidiam a formulação de políticas, diretrizes e metas para que as ações e serviços de saúde sejam  prestados de forma eficiente, equitativa e com qualidade para melhor acesso da população, atendendo aos princípios da universalidade, igualdade e integralidade da atenção à saúde estabelecidos constitucionalmente para o Sistema Único de Saúde (SUS).
 
-A coordenação tem desprendido grande esforço em reduzir o  esforço na simples obtenção dos registros, e aumentar o fornecimento de evidências econômicas baseadas na análise de dados. Tais evidências econômicas são a missão principal da DESID e subsidiam o a formulação de políticas, diretrizes e metas para que as ações e serviços de saúde sejam  prestados de forma eficiente, equitativa e com qualidade para melhor acesso da população, atendendo aos princípios da universalidade, igualdade e integralidade da atenção à saúde estabelecidos constitucionalmente para o Sistema Único de Saúde (SUS).
+A coordenação identificou a necessidade urgente e prioritária de fortalecer suas capacidades de análise de dados, uma vez que conta atualmente com reduzida equipe especializada na área, a maior parte das análises ainda é realizada apenas em planilhas e os processos de ingestão e transformação de dados são _ad-hoc_ e não institucionalizados. 
+
+Essa necessidade se torna ainda mais crítica com a responsabilidade assumida pela CGES na produção futura do Sistema de Contas de Saúde (SHA), em cooperação com a a Organização para a Cooperação e Desenvolvimento Econômico (OCDE) e outras instituições governamentais brasileiras.
+
+- criação do Núcleo de Engenharia de Dados (NErD)
+
 
 ### Objetivos do Projeto
 
 - Melhorar a qualidade e facilitar os processos de análise de dados da CGES;
 - Reduzir a dependência externa da CGES para a realização de suas funções;
 - Apoiar a produção do SHA de acordo com a metodologia da OCDE.
-- Criar e melhorar processos de desenvolvimento de produtos de dados.
+- Melhorar os processos de desenvolvimento de produtos de dados.
 
 ### Escopo do Projeto
 
@@ -72,11 +84,6 @@ A coordenação tem desprendido grande esforço em reduzir o  esforço na simple
 - Desenvolvimento de proposta de portfólio de produtos de dados.
 - Desenvolvimento de produtos de dados: esteiras de dados, relatórios, indicadores, datasets etc.
 
-### Atividades do Consultor Individual
-
-- Geração de planos e relatórios de atividades.
-- Colaboração com a equipe da CGES e outras unidades do MS.
-- Desenvolvimento de produtos de dados.
 
 ### Este documento
 
@@ -85,29 +92,50 @@ A coordenação tem desprendido grande esforço em reduzir o  esforço na simple
 | **Contrato** | Cooperação Técnica BR-T1550 |
 | **Projeto** | Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde |
 | **Produto** | Entregável 1 - Plano de Trabalho |
-: Metadados
+
 
 ## Objetivos
-O presente _Plano de Trabalho_ visa:
+O presente _Plano de Trabalho_ tem como objetivos:
 
 - Contextualizar o Projeto (\nameref{sec-intro})
-- Apresentar a abordagem de gestão e análise de dados que será adotada (\nameref{sec-metodo})
+- Apresentar e justificar a abordagem sociotécnica que será adotada (\nameref{sec-metodo})
 - Descrever os entregáveis e o cronograma de entregas (\nameref{sec-result})
 - Estabelecer expectativas e critérios de sucesso do Projeto (\nameref{sec-conclusao})
 
 ## Método {#sec-metodo}
 
-### Aspectos Organizacionais
+### Contexto
 Muitas organizações já estão na terceira geração de suas _plataformas de dados_, com a esperança de obter _insights_ de negócios e tomar decisões rápidas baseadas em evidências. Poucas, porém, podem se dizer verdadeiramente _data-driven_.
 
 Apesar disso, o investimento em tecnologia para análise de dados continua crescendo e o mercado está inundado de diferentes ferramentas e plataformas. Cada uma prometendo ser melhor, mais completa e mais fácil de usar que a outra. Mas, na prática, o que vemos é um cenário de confusão e frustração.
 
-Assim como no desenvolvimento de software, muitas organizações tratam a análise de dados com times especializados na tecnologia, separados das áreas de negócio. No ministério, essa tem sido até agora a diretriz. Há um _datalake_ do DATASUS e a DEMAS centraliza o desenvolvimento de "painéis".
+![A "explosão cambriana" do mercado de ferramentas analíticas.](images/landscape.jpeg){.column-screen-inset-shaded .lightbox fig-alt="Centenas de logotipos de empresas e produtos que oferecem soluções para análise de dados."}
 
 
-![A "explosão cambriana" do mercado de ferramentas analíticas.](images/landscape.jpeg){.column-page .lightbox fig-alt="Centenas de logotipos de empresas e produtos que oferecem soluções para análise de dados."}
+- fabricas de software e escritórios de análise
+- mudanças tecnológicas -> inversão da lógica
+- insucesso
+- perdido
+- devops - dataops - engenharia - processos
+- vivendo o passado
+- modern data stack
 
-#### Servir como missão
+<!-- ::::: {#quadro-plataformas width=70%}
+**Datawarehouses e BI (primeira geração):**  consolidando dados de diversas fontes, essa estratégia foca na limpeza e verificação dos dados antes de torná-los disponíveis. Essa centralização enfrenta desafios de escalabilidade à medida que as fontes de dados aumentam. Principais artefatos são relatórios e painéis (_dashboards_). Tabelas e relatórios complicados entendidos por poucos especialistas, impacto limitado nos negócios.
+
+**Big Data e Data Lakes (segunda geração):**  Como resposta aos gargalos da geração anterior e aproveitando a redução de custos de _hardware_, _Data Lakes_ armazenam dados em arquivos, com transformações ocorrendo no momento do consumo. Embora ofereça flexibilidade, esta abordagem apresenta desafios quanto à qualidade e documentação dos dados.
+
+**Plataformas em Nuvem (terceira geração):**  semelhante à geração anterior, mas modernizada com: *(*a*)* dados em tempo real (_streams_)*,* *(*b*)* processamento unificado de dados em _batch_ e _stream_  e *(c)* uso intensivo da nuvem. Embora aborde falhas anteriores, ainda carrega problemas das gerações passadas.
+
+::::: -->
+### Definição do Problema
+- não é problema puramente tecnológico
+- first principles
+- missão, capacidade, governança 
+- produtos, pessoas e tecnologia, processos
+
+#### Servir como lição: Evolução contínua
+
 ![Serviço como fluxo de valor e feedback; um ciclo.](images/servico.svg){.column-margin .lightbox #fig-servico fig-alt="Fluxo de valor da organização para o usuário, serviço, e do usuário para a organização, feedback." width=90% fig-column=margin}
 
 <!-- Todo serviço deve transformar seu _usuário_ para melhor [^usuario]; um _fluxo de valor_ (@fig-servico) que pode envolver diversas etapas e atendimentos [@quadro-transacional-vs-analitico]. -->
@@ -122,7 +150,7 @@ Todo serviço deve transformar seu _usuário_ para melhor [^usuario]; um _fluxo 
 ::::: -->
 
 
-O SUS atua diariamente para melhorar a saúde dos brasileiros, milhares de vezes por dia. A importância da _missão de servir_ está fortemente imbuída na cultura do ministério.
+O SUS atua diariamente para melhorar a saúde dos brasileiros, milhares de vezes por dia. A importância de _servir_ (atender) está fortemente imbuída na cultura do ministério.
 
 Cada _transação_ [^transacao] deixa um rastro de dados. A imensa quantidade de dados gerados pelo SUS é visto por alguns como um ativo: essa é uma visão equivocada.  Dados só tem valor quando usados.
 
@@ -131,14 +159,41 @@ Cada _transação_ [^transacao] deixa um rastro de dados. A imensa quantidade de
 O _feedback_ do usuário, direto e indireto (via indicadores), fornece informações cruciais para aprimorar o serviço: um fluxo de valor no sentido contrário, do usuário para o serviço.
 
 
-
-A missão-maior do SUS vai além de atender o usuário no momento presente, mas também envolve a _evolução contínua_ do serviço* [@fig-evolucao], baseada em evidências. Quanto mais rápido o ciclo de _servir_, _analizar_ e _aprender_, mais hipóteses podem ser testadas e mais rápido o serviço evolui.
+O propósito do SUS vai além de atender o usuário no momento presente, mas também envolve a _evolução contínua_ do serviço [@fig-evolucao], baseada em evidências. Quanto mais rápido o ciclo de _servir_, _analizar_ e _aprender_, mais hipóteses podem ser testadas e mais rápido o serviço evolui.
 
 ![Evolução contínua.](images/evolucao.svg){.column-margin .lightbox fig-alt="Centenas de logotipos de empresas e produtos que oferecem soluções para análise de dados." #fig-evolucao width=50%}
 
+- Evolução Contínua
+- Maestria
+- Pessoas e Processos
 
-#### Evolução orientada a missões
+#### Servir como prisão: Evolução perdidas
 
+"Nos primeiros quatro meses de 2023, mais de 10,3 mil servidores [1/3 do quadro] da Secretaria de Saúde do Distrito Federal (SES-DF) precisaram de atestados de afastamento do trabalho. Grande parte desses servidores são técnicos em enfermagem"_ @Schwingel2023.  Organizações doentes adoecem pessoas. No serviço público, são servidoras _da ponta_ (enfermeiras,  médicas, professoras) as que mais adoecem. O que está acontecendo?
+
+
+![O "sistema" moendo pessoas. Arte de _Gerald Scarfe_ para o filme _The Wall_ (1982).](images/grinder.png){.column-margin .lightbox fig-alt="Triângulo com propósito, autonomia e maestria em cada vértice." width=90% #fig-grinder}
+
+Organizações públicas e privadas ainda são majoritariamente estruturadas em silos funcionais [@fig-paredes], com equipes especializadas em áreas como negócio, tecnologia, jurídico, controle; herança da burocracia de Weber e da _gestão científica_ de Taylor do início do século XX.
+
+Esta estrutura exige que cada seviço seja coordenado entre equipes distintas, com diferentes hierarquias, prioridades e linguagens. Como na gincana em que se amarra o pé de uma criança no da outra: sem sincronia, caem as duas e se andam, é no ritmo da mais lenta.
+
+Os servidores _da ponta_ atendem os _usuários reais_ (ex. a mãe precisando de atendimento para o filho), enfrentam a realidade; os servidores _meio_ atendem os servidores mais à ponta, _usuários internos_.
+
+Estar na ponta traz clareza da importância da sua contribuição individual,*senso de *propósito* (@fig-danpink). Ao mesmo tempo, exarceba a sensação de *impotência* diante de uma realidade que não se consegue mudar e que parece que os outros (áreas meio) não enxergam. No setor público,  há ainda o _"requinte de crueldade"_ dos órgão de controle responsabilizarem pessoalmente o gestor _da ponta_ por um serviço que este não controla inteiramente.
+
+
+
+![Muros organizacionais.](images/paredes3.svg){.column-margin .lightbox fig-alt="times separados tentando sem sucesso coordenar um serviço" width=90% #fig-paredes}
+
+
+> O servidor na ponta está preso entre a realidade e o muro organizacional.
+- Governança
+- Organização e Tecnologia
+
+
+
+#### Servir como missão: Evolução orientada
 A gestão orientada a evidências estabelece apenas o método da resposta, mas não o que perguntar, para onde evoluir. Para isso é primordial definir escolhas estratégicas, decisões políticas.
 
 O conceito de "_missões_" em políticas públicas tem sido popularizado pela economista Mariana Mazzucato @Mazzucato2022. Ela destaca a importância de definir objetivos claros, ambiciosos e mensuráveis para orientar a inovação (metas _moonshot_).
@@ -161,74 +216,30 @@ A ambição de uma meta _moonshot_ envolve essencialmente risco. Elas definem co
 [^sketchplanations]: Figura inspirada em \@sketchplanations
 
 <!-- Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que a mudança é feita por pessoas. E que as pessoas são motivadas por propósitos (@fig-danpink). Ao longo dos anos, as lições da teoria sociotécnia foram descobertas, esquecidas e redescobertas várias vezes com diferentes nomes (@quadro-yorkshire). -->
-Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que a mudança é feita por pessoas. E que as pessoas são motivadas por propósitos (@fig-danpink). Ao longo dos anos, as lições da teoria sociotécnia foram descobertas, esquecidas e redescobertas várias vezes com diferentes nomes.
+
 
 ![Arcabouço de Mazzucato.](images/missao.svg){.column-margin .lightbox fig-alt="Triângulo com propósito, autonomia e maestria em cada vértice." width=90% #fig-mazzucato}
 
 Se a missão é a _função objetivo_, os recursos são apenas variáveis, pois são _virtualmente infinitos_, dependem apenas de _vontade política_ (alocação). As restrições são organizacionais.  Em outras palavras, uma meta pode não ser atingida mesmo com recursos ilimitados.
 
 
-#### Servir como prisão
-"Nos primeiros quatro meses de 2023, mais de 10,3 mil servidores [1/3 do quadro] da Secretaria de Saúde do Distrito Federal (SES-DF) precisaram de atestados de afastamento do trabalho. Grande parte desses servidores são técnicos em enfermagem"_ @Schwingel2023.  Organizações doentes adoecem pessoas. No serviço público, são servidoras _da ponta_ (enfermeiras,  médicas, professoras) as que mais adoecem. O que está acontecendo?
-
-
-![O "sistema" moendo pessoas. Arte de _Gerald Scarfe_ para o filme _The Wall_ (1982).](images/grinder.png){.column-margin .lightbox fig-alt="Triângulo com propósito, autonomia e maestria em cada vértice." width=90% #fig-grinder}
-
-Organizações públicas e privadas ainda são majoritariamente estruturadas em silos funcionais [@fig-paredes], com equipes especializadas em áreas como negócio, tecnologia, jurídico, controle; herança da burocracia de Weber e da _gestão científica_ de Taylor do início do século XX.
-
-Esta estrutura exige que cada seviço seja coordenado entre equipes distintas, com diferentes hierarquias, prioridades e linguagens. Como na gincana em que se amarra o pé de uma criança no da outra: sem sincronia, caem as duas e se andam, é no ritmo da mais lenta.
-
-Os servidores _da ponta_ atendem os _usuários reais_ (ex. a mãe precisando de atendimento para o filho/* que não para de chorar há dias, a criança desatenta na aula porque já são 9h e ainda não comeu nada*/); os servidores _meio_ atendem os servidores mais à ponta, seus _usuários internos_.
-
-Estar na ponta traz clareza da importância da sua contribuição individual,*senso de *propósito* (@fig-danpink). Ao mesmo tempo, exarceba a sensação de *impotência* diante de uma realidade que não se consegue mudar e que parece que os outros (áreas meio) não enxergam. No setor público,  há ainda o _"requinte de crueldade"_ dos órgão de controle responsabilizarem pessoalmente o gestor _da ponta_ por um serviço que este não controla inteiramente.
 
 
 
-![Muros organizacionais.](images/paredes3.svg){.column-margin .lightbox fig-alt="times separados tentando sem sucesso coordenar um serviço" width=90% #fig-paredes}
-
-
-> O servidor na ponta está preso entre a realidade e o muro organizacional.
-
-
-#### Alinhamento e Autonomia
-
+### Síntese
+Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que a mudança é feita por pessoas. E que as pessoas são motivadas por propósitos (@fig-danpink). Ao longo dos anos, as lições da teoria sociotécnia foram descobertas, esquecidas e redescobertas várias vezes com diferentes nomes.
 
 ![Governança: Alinhamento e Autonomia.](images/alinha_autonomia.svg){.column-margin .lightbox fig-alt="gráfico relacionando alinhamento com autonomia" width=90% #fig-governanca}
 
+- problema socio técnica
 
 
-
-
-
-
-
-
-### Breve história da Análise de Dados
-
-<!-- ::::: {#quadro-plataformas width=70%}
-**Datawarehouses e BI (primeira geração):**  consolidando dados de diversas fontes, essa estratégia foca na limpeza e verificação dos dados antes de torná-los disponíveis. Essa centralização enfrenta desafios de escalabilidade à medida que as fontes de dados aumentam. Principais artefatos são relatórios e painéis (_dashboards_). Tabelas e relatórios complicados entendidos por poucos especialistas, impacto limitado nos negócios.
-
-**Big Data e Data Lakes (segunda geração):**  Como resposta aos gargalos da geração anterior e aproveitando a redução de custos de _hardware_, _Data Lakes_ armazenam dados em arquivos, com transformações ocorrendo no momento do consumo. Embora ofereça flexibilidade, esta abordagem apresenta desafios quanto à qualidade e documentação dos dados.
-
-**Plataformas em Nuvem (terceira geração):**  semelhante à geração anterior, mas modernizada com: *(*a*)* dados em tempo real (_streams_)*,* *(*b*)* processamento unificado de dados em _batch_ e _stream_  e *(c)* uso intensivo da nuvem. Embora aborde falhas anteriores, ainda carrega problemas das gerações passadas.
-
-::::: -->
-
-
-- Modern Data Stack
-
-### Nível de Maturidade em Gestão e Análise de Dados
-- Institucionalização
-
-### Abordagem Data Mesh
+### Abordagem
+- yorkshire
 
 Data Mesh [^mesh] é uma abordagem para escalar e organizar a arquitetura e plataformas de dados baseada nos princípios do _Domain Driven Design_, automação de precessos e _Design Thinking_.
 
 [^mesh]: Data Mesh é um termo cunhado por Zhamak Dehghani. (referencia?)
-
-
-#### Domínios
-
 #### Dados como Produtos
 - datasets, esteiras, relatórios, 
 - FAIR
@@ -239,16 +250,25 @@ Data Mesh [^mesh] é uma abordagem para escalar e organizar a arquitetura e plat
 - data as code
 - contratos, data contracts
 
-#### Plataforma de Auto-Serviço
+#### Domínios
+- Orçamentos, Preços, Custos
+
+#### Governança Compartilhada
+- INDA - Infra-estrutura Nacional de Dados Abertos
+
+#### Infra-estrutura de auto-serviço
 - open source
 - DESID Playground
 - ingest, transform, serve
 - Databricks, Snowflake, Redshift, Microsoft Fabric
 
-#### Governança Compartilhada
-- INDA - Infra-estrutura Nacional de Dados Abertos
+### Critérios de Sucesso
 
-### Gestão Ágil
+#### Nível de Maturidade
+- Institucionalização
+
+
+### Gestão de Projeto
 - Scrum based
 - espiral
 - sprints
@@ -259,8 +279,9 @@ Data Mesh [^mesh] é uma abordagem para escalar e organizar a arquitetura e plat
 - falta ferramentas básicas de colaboração e gestão
 - datasus
 
-## Resultado {#sec-result}
+## Resultados {#sec-result} 
 ### Entregáveis
+- tabela
 1. Plano de Trabalho
     -- Fevereiro 2024 
     -- este documento
@@ -290,3 +311,7 @@ nível de maturidade 2
 
 ::: {#refs}
 :::
+
+
+
+

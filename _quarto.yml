@@ -9,9 +9,9 @@ manuscript:
 format:    
   html:
     toc: true
-    toc-depth: 1
+    toc-depth: 2
     section-numbering: 1.1.a
-    number-depth: 2
+    number-depth: 3
     fig-column: margin
     reference-location: margin
   typst:
@@ -19,7 +19,7 @@ format:
     toc: true
     toc-depth: 3
     section-numbering: 1.1.a
-    number-depth: 2
+    number-depth: 3
     papersize: a4
 
 
