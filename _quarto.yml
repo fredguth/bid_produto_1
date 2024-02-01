@@ -1,0 +1,27 @@
+project:
+  type: manuscript
+
+execute:
+  freeze: auto
+manuscript: 
+  article: relatorio.qmd
+
+format:    
+  html:
+    toc: true
+    toc-depth: 1
+    section-numbering: 1.1.a
+    number-depth: 2
+    fig-column: margin
+    reference-location: margin
+  typst:
+    keep-typ: true
+    toc: true
+    toc-depth: 3
+    section-numbering: 1.1.a
+    number-depth: 2
+    papersize: a4
+
+
+
+
