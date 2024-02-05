@@ -259,24 +259,46 @@
 
 = Introdução
 <sec-intro>
-O Projeto #strong[Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde] \(DESID/MS), é uma iniciativa de 12 meses no âmbito da #emph[Cooperação Técnica BR-T1550] com o Banco Inter-americano de Desenvolvimento \(BID). Seu objetivo maior é fortalecer a capacidade de análise de dados da DESID, integrando técnicas avançadas de ciência de dados e preparando a organização para a adoção de modelos de inteligência artificial.
+O presente projeto é uma iniciativa de 12 meses no âmbito da #emph[Cooperação Técnica BR-T1550] do Ministério da Saúde com o Banco Inter-americano de Desenvolvimento \(BID). Seu objetivo maior é fortalecer a capacidade de análise de dados do Departamento de Economia da Saúde, Investimento e Desempenho \(DESID/MS), integrando técnicas avançadas de ciência de dados e preparando a organização para a adoção de modelos de inteligência artificial.
 
 == Motivação
 <motivação>
+#figure([
+#box(width: 80%,image("images/pratos.svg"))
+], caption: figure.caption(
+position: bottom, 
+[
+Sistemas são meios e não fins.
+]), 
+kind: "quarto-float-fig", 
+supplement: "Figure", 
+numbering: "1", 
+)
+<fig-pratos>
+
+
 A Coordenação-Geral de Informações em Economia da Saúde \(CGES/DESID) é uma área multidiprofissional e interdisciplinar responsável por importantes sistemas de registro de informações econômicas de saúde \(SIOPS, BPS e ApuraSUS) e pelo uso desses dados para fornecer evidências econômicas para formulação de políticas, diretrizes e metas para a contínua melhoria do Sistema Único de Saúde \(SUS).
 
-A coordenação conta atualmente com reduzida equipe especializada em dados, a maior parte das análises é realizada em planilhas e os processos de ingestão e transformação de dados são #emph[ad-hoc];.
+#quote(block: true)[
+Os sistemas não são fins em si mesmos. Mais Economia!
 
-Essa necessidade se torna ainda mais crítica com a responsabilidade assumida pela CGES na produção futura do Sistema de Contas de Saúde \(SHA), em cooperação com a a Organização para a Cooperação e Desenvolvimento Econômico \(OCDE).
+— Gabriel Squeff
+]
 
-A coordenação tem desprendido grande esforço em reduzir o esforço na simples obtenção dos registros, e aumentar o fornecimento de evidências econômicas baseadas na análise de dados. Tais evidências econômicas são a missão principal da DESID e subsidiam o a formulação de políticas, diretrizes e metas para que as ações e serviços de saúde sejam prestados de forma eficiente, equitativa e com qualidade para melhor acesso da população, atendendo aos princípios da universalidade, igualdade e integralidade da atenção à saúde estabelecidos constitucionalmente para o Sistema Único de Saúde \(SUS).
+Desde o início de 2023, a CGES tem investido em melhorias para automatizar e reduzir esforços na obtenção dos registros e aumentar a produção de evidências econômicas baseadas na análise de dados. Tais evidências são a missão principal da DESID e subsidiam a formulação de políticas, diretrizes e metas para que as ações e serviços de saúde sejam prestados de forma eficiente, equitativa e com qualidade para melhor acesso da população, atendendo aos princípios da universalidade, igualdade e integralidade da atenção à saúde estabelecidos constitucionalmente para o Sistema Único de Saúde \(SUS).
+
+A coordenação identificou a necessidade urgente e prioritária de fortalecer suas capacidades de análise de dados, uma vez que conta atualmente com reduzida equipe especializada na área, a maior parte das análises ainda é realizada apenas em planilhas e os processos de ingestão e transformação de dados são #emph[ad-hoc] e não institucionalizados.
+
+Essa necessidade se torna ainda mais crítica com a responsabilidade assumida pela CGES na produção futura do Sistema de Contas de Saúde \(SHA), em cooperação com a a Organização para a Cooperação e Desenvolvimento Econômico \(OCDE) e outras instituições governamentais brasileiras.
+
+- criação do Núcleo de Engenharia de Dados \(NErD)
 
 == Objetivos do Projeto
 <objetivos-do-projeto>
 - Melhorar a qualidade e facilitar os processos de análise de dados da CGES;
 - Reduzir a dependência externa da CGES para a realização de suas funções;
 - Apoiar a produção do SHA de acordo com a metodologia da OCDE.
-- Criar e melhorar processos de desenvolvimento de produtos de dados.
+- Melhorar os processos de desenvolvimento de produtos de dados.
 
 == Escopo do Projeto
 <escopo-do-projeto>
@@ -285,12 +307,6 @@ A coordenação tem desprendido grande esforço em reduzir o esforço na simples
 - Desenvolvimento de metodologia de desenvolvimento de produtos de dados.
 - Desenvolvimento de proposta de portfólio de produtos de dados.
 - Desenvolvimento de produtos de dados: esteiras de dados, relatórios, indicadores, datasets etc.
-
-== Atividades do Consultor Individual
-<atividades-do-consultor-individual>
-- Geração de planos e relatórios de atividades.
-- Colaboração com a equipe da CGES e outras unidades do MS.
-- Desenvolvimento de produtos de dados.
 
 == Este documento
 <este-documento>
@@ -306,27 +322,54 @@ align(center)[#table(
   [#strong[Produto];],
   [Entregável 1 - Plano de Trabalho],
 )]
-, caption: [Metadados]
 )
 
 = Objetivos
 <objetivos>
-O presente #emph[Plano de Trabalho] visa:
+O presente #emph[Plano de Trabalho] tem como objetivos:
 
 - Contextualizar o Projeto \(#link(<sec-intro>)[1 Introdução];)
-- Apresentar a abordagem de gestão e análise de dados que será adotada \(#link(<sec-metodo>)[3 Método];)
-- Descrever os entregáveis e o cronograma de entregas \(#link(<sec-result>)[4 Resultado];)
+- Apresentar e justificar a abordagem sociotécnica que será adotada \(#link(<sec-metodo>)[3 Método];)
+- Descrever os entregáveis e o cronograma de entregas \(#link(<sec-result>)[4 Resultados];)
 - Estabelecer expectativas e critérios de sucesso do Projeto \(#link(<sec-conclusao>)[5 Conclusão];)
 
 = Método
 <sec-metodo>
-== Aspectos Organizacionais
-<aspectos-organizacionais>
-Muitas organizações já estão na terceira geração de suas #emph[plataformas de dados];, com a esperança de obter #emph[insights] de negócios e tomar decisões rápidas baseadas em evidências. Poucas, porém, podem se dizer verdadeiramente #emph[data-driven];.
+== Contexto
+<contexto>
+- #strong[Reconhecimento do Valor de Decisões Baseadas em Evidências:]
+  - Organizações globalmente investem em decisões fundamentadas em dados.
+  - Investimento em ferramentas analíticas superou 80 bilhões de dólares em 2023.
+- #strong[Desafio em Tornar-se Verdadeiramente Orientado por Dados:]
+  - Muitas organizações estão avançando para a terceira geração de plataformas de dados.
+  - Poucas alcançaram o estágio de serem orientadas por dados.
+- #strong[Falhas nas Iniciativas de Plataformas de Dados:]
+  - Falhas atribuídas à não aplicação de aprendizados em arquiteturas distribuídas.
+  - Proposta de uma nova arquitetura empresarial de dados: a malha de dados.
+- #strong[Saturação do Mercado com Ferramentas Analíticas:]
+  - Mercado inundado com diversas ferramentas, prometendo ser a solução definitiva.
+  - Situação de confusão e frustração devido à "explosão cambriana" de ferramentas.
+- #strong[Evolução das Plataformas de Dados:]
+  - De Datawarehouses e BI para Big Data e Data Lakes, e finalmente para Plataformas em Nuvem.
+  - Desafios persistem em escalabilidade, qualidade e documentação dos dados.
+- #strong[Natureza Holística do Problema:]
+  - Necessidade de abordagem que englobe missão, capacidade, governança.
+  - Importância da integração de produtos, pessoas, tecnologia e processos.
+  - Exige mudança cultural para valorizar orientação por dados.
 
-Apesar disso, o investimento em tecnologia para análise de dados continua crescendo e o mercado está inundado de diferentes ferramentas e plataformas. Cada uma prometendo ser melhor, mais completa e mais fácil de usar que a outra. Mas, na prática, o que vemos é um cenário de confusão e frustração.
+Optei por usar a abordagem de princípios fundamentais para enfrentar nossa questão. Esta estratégia nos permite desmontar o problema até o básico e então reconstruí-lo, evitando soluções prontas e pensamento padrão. Ao questionar as suposições comuns e focar no essencial, temos a chance de encontrar soluções inovadoras e eficientes que poderiam ser ignoradas de outra forma. A força dessa abordagem está na sua capacidade de nos levar a ideias revolucionárias e avanços significativos na solução de problemas complexos.
 
-Assim como no desenvolvimento de software, muitas organizações tratam a análise de dados com times especializados na tecnologia, separados das áreas de negócio. No ministério, essa tem sido até agora a diretriz. Há um #emph[datalake] do DATASUS e a DEMAS centraliza o desenvolvimento de "painéis".
+Organizações de todos os tamanhos em todo mundo reconhecem o valor de decisões baseadas em evidências. Estima-se que em 2023, o investimento global em ferramentas analíticas superou 80 bilhões de dólares.
+
+According to IDC, the markets for Analytics Data Management and Integration Platforms and Business Intelligence and Analytics Tools, which we believe we address, will have a combined value of \$56 billion by the end of 2020 and \$84 billion by the end of 2023.
+
+Muitas organizações já estão na terceira geração de suas #emph[plataformas de dados];, com a esperança de
+
+Poucas, porém, podem se dizer verdadeiramente #emph[data-driven];.
+
+However what I would like to share with you is an architectural perspective that underpins the failure of many data platform initiatives. I demonstrate how we can adapt and apply the learnings of the past decade in building distributed architectures at scale, to the domain of data; and I will introduce a new enterprise data architecture that I call data mesh.
+
+Apesar disso, o investimento em tecnologia para análise de dados continua crescendo e o mercado está inundado de diferentes ferramentas e plataformas. Cada uma prometendo ser melhor, mais completa e mais fácil de usar que a outra. Mas, na prática, o que vemos é um cenário de confusão e frustração com o que chamam de "explosão cambriana" de ferramentas analíticas.
 
 #figure([
 #box(width: 1600.0pt, image("images/landscape.jpeg"))
@@ -340,19 +383,37 @@ supplement: "Figure",
 )
 
 
-#block[
-#heading(
-level: 
-3
-, 
-numbering: 
-none
-, 
+- fabricas de software e escritórios de análise
+- mudanças tecnológicas -\> inversão da lógica
+- insucesso
+- perdido
+- devops - dataops - engenharia - processos
+- vivendo o passado
+- modern data stack
+
+#block(
+fill:yellow.lighten(90%),
+outset:1em,
+radius:6pt,
+width:70%,
 [
-Servir como missão
-]
-)
-]
+#strong[Datawarehouses e BI \(primeira geração):] consolidando dados de diversas fontes, essa estratégia foca na limpeza e verificação dos dados antes de torná-los disponíveis. Essa centralização enfrenta desafios de escalabilidade à medida que as fontes de dados aumentam. Principais artefatos são relatórios e painéis \(#emph[dashboards];). Tabelas e relatórios complicados entendidos por poucos especialistas, impacto limitado nos negócios.
+
+#strong[Big Data e Data Lakes \(segunda geração):] Como resposta aos gargalos da geração anterior e aproveitando a redução de custos de #emph[hardware];, #emph[Data Lakes] armazenam dados em arquivos, com transformações ocorrendo no momento do consumo. Embora ofereça flexibilidade, esta abordagem apresenta desafios quanto à qualidade e documentação dos dados.
+
+#strong[Plataformas em Nuvem \(terceira geração):] semelhante à geração anterior, mas modernizada com: #emph[\(];a#emph[)] dados em tempo real \(#emph[streams];)#emph[,] #emph[\(];b#emph[)] processamento unificado de dados em #emph[batch] e #emph[stream] e #emph[\(c)] uso intensivo da nuvem. Embora aborde falhas anteriores, ainda carrega problemas das gerações passadas.
+
+])
+
+== Definição do Problema
+<definição-do-problema>
+- não é problema puramente tecnológico
+- first principles
+- missão, capacidade, governança
+- produtos, pessoas e tecnologia, processos
+
+=== Servir como lição: Evolução contínua
+<servir-como-lição-evolução-contínua>
 #figure([
 #box(width: 90%,image("images/servico.svg"))
 ], caption: figure.caption(
@@ -369,13 +430,25 @@ numbering: "1",
 
 Todo serviço deve transformar seu #emph[usuário] para melhor #footnote[#emph[Usuário] Pessoa ou organização que se beneficia de um serviço. Também chamado de #emph[cliente];.];; um #emph[fluxo de valor] \(@fig-servico) que pode envolver diversas etapas e atendimentos.
 
-O SUS atua diariamente para melhorar a saúde dos brasileiros, milhares de vezes por dia. A importância da #emph[missão de servir] está fortemente imbuída na cultura do ministério.
+#block(
+fill:yellow.lighten(90%),
+outset:1em,
+radius:6pt,
+width:70%,
+[
+#strong[Dados transacionais:] dados primários que sustentam o funcionamento dos serviços diretos ao usuário e mantêm seu estado atual. Também conhecidos como #emph[dados operacionais];.
+
+#strong[Dados analíticos:] dados derivados das bases transacionais \(secundários), fornecem visão agregada e histórica dos serviços.
+
+])
+
+O SUS atua diariamente para melhorar a saúde dos brasileiros, milhares de vezes por dia. A importância de #emph[servir] \(atender) está fortemente imbuída na cultura do ministério.
 
 Cada #emph[transação] #footnote[Uma transação é uma execução do serviço, um atendimento.] deixa um rastro de dados. A imensa quantidade de dados gerados pelo SUS é visto por alguns como um ativo: essa é uma visão equivocada. Dados só tem valor quando usados.
 
 O #emph[feedback] do usuário, direto e indireto \(via indicadores), fornece informações cruciais para aprimorar o serviço: um fluxo de valor no sentido contrário, do usuário para o serviço.
 
-A missão-maior do SUS vai além de atender o usuário no momento presente, mas também envolve a #emph[evolução contínua] do serviço\* @fig-evolucao, baseada em evidências. Quanto mais rápido o ciclo de #emph[servir];, #emph[analizar] e #emph[aprender];, mais hipóteses podem ser testadas e mais rápido o serviço evolui.
+O propósito do SUS vai além de atender o usuário no momento presente, mas também envolve a #emph[evolução contínua] do serviço @fig-evolucao, baseada em evidências. Quanto mais rápido o ciclo de #emph[servir];, #emph[analizar] e #emph[aprender];, mais hipóteses podem ser testadas e mais rápido o serviço evolui.
 
 #figure([
 #box(width: 50%,image("images/evolucao.svg"))
@@ -391,70 +464,12 @@ numbering: "1",
 <fig-evolucao>
 
 
-#block[
-#heading(
-level: 
-3
-, 
-numbering: 
-none
-, 
-[
-Evolução orientada a missões
-]
-)
-]
-A gestão orientada a evidências estabelece apenas o método da resposta, mas não o que perguntar, para onde evoluir. Para isso é primordial definir escolhas estratégicas, decisões políticas.
+- Evolução Contínua
+- Maestria
+- Pessoas e Processos
 
-O conceito de "#emph[missões];" em políticas públicas tem sido popularizado pela economista Mariana Mazzucato #cite(<Mazzucato2022>);. Ela destaca a importância de definir objetivos claros, ambiciosos e mensuráveis para orientar a inovação \(metas #emph[moonshot];).
-
-A ambição de uma meta #emph[moonshot] envolve essencialmente risco. Elas definem concretamente "#emph[onde];" se quer chegar, mas não "#emph[como];". Para o "#emph[como];" existem "apostas", caminhos-hipótese que se pode testar. Algumas hipóteses vão falhar, mas o aprendizado é parte do processo.
-
-#figure([
-#box(width: 90%,image("images/danpink3.svg"))
-], caption: figure.caption(
-position: bottom, 
-[
-Auto-motivação segundo Dan Pink. #footnote[Figura inspirada em \@sketchplanations]
-]), 
-kind: "quarto-float-fig", 
-supplement: "Figure", 
-numbering: "1", 
-)
-<fig-danpink>
-
-
-Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que a mudança é feita por pessoas. E que as pessoas são motivadas por propósitos \(@fig-danpink). Ao longo dos anos, as lições da teoria sociotécnia foram descobertas, esquecidas e redescobertas várias vezes com diferentes nomes.
-
-#figure([
-#box(width: 90%,image("images/missao.svg"))
-], caption: figure.caption(
-position: bottom, 
-[
-Arcabouço de Mazzucato.
-]), 
-kind: "quarto-float-fig", 
-supplement: "Figure", 
-numbering: "1", 
-)
-<fig-mazzucato>
-
-
-Se a missão é a #emph[função objetivo];, os recursos são apenas variáveis, pois são #emph[virtualmente infinitos];, dependem apenas de #emph[vontade política] \(alocação). As restrições são organizacionais. Em outras palavras, uma meta pode não ser atingida mesmo com recursos ilimitados.
-
-#block[
-#heading(
-level: 
-3
-, 
-numbering: 
-none
-, 
-[
-Servir como prisão
-]
-)
-]
+=== Servir como prisão: Evolução perdida
+<servir-como-prisão-evolução-perdida>
 "Nos primeiros quatro meses de 2023, mais de 10,3 mil servidores \[1/3 do quadro\] da Secretaria de Saúde do Distrito Federal \(SES-DF) precisaram de atestados de afastamento do trabalho. Grande parte desses servidores são técnicos em enfermagem"\_ #cite(<Schwingel2023>);. Organizações doentes adoecem pessoas. No serviço público, são servidoras #emph[da ponta] \(enfermeiras, médicas, professoras) as que mais adoecem. O que está acontecendo?
 
 #figure([
@@ -475,7 +490,7 @@ Organizações públicas e privadas ainda são majoritariamente estruturadas em 
 
 Esta estrutura exige que cada seviço seja coordenado entre equipes distintas, com diferentes hierarquias, prioridades e linguagens. Como na gincana em que se amarra o pé de uma criança no da outra: sem sincronia, caem as duas e se andam, é no ritmo da mais lenta.
 
-Os servidores #emph[da ponta] atendem os #emph[usuários reais] \(ex. a mãe precisando de atendimento para o filho/\* que não para de chorar há dias, a criança desatenta na aula porque já são 9h e ainda não comeu nada\*/); os servidores #emph[meio] atendem os servidores mais à ponta, seus #emph[usuários internos];.
+Os servidores #emph[da ponta] atendem os #emph[usuários reais] \(ex. a mãe precisando de atendimento para o filho), enfrentam a realidade; os servidores #emph[meio] atendem os servidores mais à ponta, #emph[usuários internos];.
 
 Estar na ponta traz clareza da importância da sua contribuição individual,#emph[senso de ];propósito\* \(@fig-danpink). Ao mesmo tempo, exarceba a sensação de #emph[impotência] diante de uma realidade que não se consegue mudar e que parece que os outros \(áreas meio) não enxergam. No setor público, há ainda o #emph["requinte de crueldade"] dos órgão de controle responsabilizarem pessoalmente o gestor #emph[da ponta] por um serviço que este não controla inteiramente.
 
@@ -494,22 +509,63 @@ numbering: "1",
 
 
 #quote(block: true)[
-O servidor na ponta está preso entre a realidade e o muro organizacional.
+O servidor na ponta está preso entre a realidade e o muro organizacional. - Governança - Organização e Tecnologia
 ]
 
-#block[
-#heading(
-level: 
-3
-, 
-numbering: 
-none
-, 
+=== Servir como missão: Evolução orientada
+<servir-como-missão-evolução-orientada>
+A gestão orientada a evidências estabelece apenas o método da resposta, mas não o que perguntar, para onde evoluir. Para isso é primordial definir escolhas estratégicas, decisões políticas.
+
+O conceito de "#emph[missões];" em políticas públicas tem sido popularizado pela economista Mariana Mazzucato #cite(<Mazzucato2022>);. Ela destaca a importância de definir objetivos claros, ambiciosos e mensuráveis para orientar a inovação \(metas #emph[moonshot];).
+
+#block(
+fill:yellow.lighten(90%),
+outset:1em,
+radius:6pt,
+width:70%,
 [
-Alinhamento e Autonomia
-]
+#strong[Moonshot:] Meta ambiciosa, que requer inovação radical para ser atingida. Remete ao projeto Apollo que ambicionou levar humanos à Lua. Difere-se da missão-maior de servir por ser uma missão-meta, com prazo e escopo definidos.
+
+#emph[Ex.] Meta "Três Bilhões" da OMS: #cite(<gpw13>) - 1 bilhão de pessoas a mais com cobertura universal de saúde. - 1 bilhão de pessoas a mais protegidas de emergências de saúde. - 1 bilhão de pessoas a mais gozando de melhor saúde e bem-estar.
+
+])
+
+A ambição de uma meta #emph[moonshot] envolve essencialmente risco. Elas definem concretamente "#emph[onde];" se quer chegar, mas não "#emph[como];". Para o "#emph[como];" existem "apostas", caminhos-hipótese que se pode testar. Algumas hipóteses vão falhar, mas o aprendizado é parte do processo.
+
+#figure([
+#box(width: 90%,image("images/danpink3.svg"))
+], caption: figure.caption(
+position: bottom, 
+[
+Auto-motivação segundo Dan Pink. #footnote[Figura inspirada em #emph[sketchplanations];]
+]), 
+kind: "quarto-float-fig", 
+supplement: "Figure", 
+numbering: "1", 
 )
-]
+<fig-danpink>
+
+
+#figure([
+#box(width: 90%,image("images/missao.svg"))
+], caption: figure.caption(
+position: bottom, 
+[
+Arcabouço de Mazzucato.
+]), 
+kind: "quarto-float-fig", 
+supplement: "Figure", 
+numbering: "1", 
+)
+<fig-mazzucato>
+
+
+Se a missão é a #emph[função objetivo];, os recursos são apenas variáveis, pois são #emph[virtualmente infinitos];, dependem apenas de #emph[vontade política] \(alocação). As restrições são organizacionais. Em outras palavras, uma meta pode não ser atingida mesmo com recursos ilimitados.
+
+== Síntese
+<síntese>
+Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que a mudança é feita por pessoas. E que as pessoas são motivadas por propósitos \(@fig-danpink). Ao longo dos anos, as lições da teoria sociotécnia foram descobertas, esquecidas e redescobertas várias vezes com diferentes nomes.
+
 #figure([
 #box(width: 90%,image("images/alinha_autonomia.svg"))
 ], caption: figure.caption(
@@ -524,84 +580,69 @@ numbering: "1",
 <fig-governanca>
 
 
-== Breve história da Análise de Dados
-<breve-história-da-análise-de-dados>
-- Modern Data Stack
+- problema socio técnica
 
-== Nível de Maturidade em Gestão e Análise de Dados
-<nível-de-maturidade-em-gestão-e-análise-de-dados>
-- Institucionalização
-
-== Abordagem Data Mesh
-<abordagem-data-mesh>
-Data Mesh #footnote[Data Mesh é um termo cunhado por Zhamak Dehghani. \(referencia?)] é uma abordagem para escalar e organizar a arquitetura e plataformas de dados baseada nos princípios do #emph[Domain Driven Design];, automação de precessos e #emph[Design Thinking];.
-
+== Abordagem
+<abordagem>
+#block(
+fill:purple.lighten(90%),
+outset:1em,
+radius:6pt,
+width:70%,
+[
 #block[
 #heading(
 level: 
-3
+1
 , 
 numbering: 
 none
 , 
+outlined: 
+false
+, 
 [
-Domínios
+Das Minas de Yorkshire ao Spotify
 ]
 )
 ]
-#block[
-#heading(
-level: 
-3
-, 
-numbering: 
-none
-, 
-[
-Dados como Produtos
-]
-)
-]
-- datasets, esteiras, relatórios,
-- FAIR – Findable: Discoverable, Addressable – Acessible: Natively Accessible, System Agnostic, Format Agnostic – Interoperable – Reusable: Value on its own, Trustworthy
-- data as code
-- contratos, data contracts
+No final dos anos 1940, o carvão era a principal fonte de energia da Inglaterra. Para apoiar a reconstrução industrial pós-guerra, era essencial aumentar a sua produção e reduzir custos. Com esse intuito, introduziram-se novas máquinas nas minas de Yorkshire. A produtividade, contudo, diminuiu.
 
-#block[
-#heading(
-level: 
-3
-, 
-numbering: 
-none
-, 
-[
-Plataforma de Auto-Serviço
-]
-)
-]
+Chamados para investigar o problema, pesquisadores do Instituto Tavistock descobriram que as novas máquinas alteraram a dinâmica e cooperação entre os mineiros, que antes trabalhavam em equipes multifuncionais e autônomas com foco na resolução de problemas e alto grau de adaptabilidade.
+
+Dessa observação nasceu a teoria sociotécnica, que enfatiza a importância de equilibrar tecnologia e relações humanas. Essa lição foi ora esquecida, ora redescoberta em diferentes contextos:
+
+- No esforço de guerra americano que dobrou o PIB em 4 anos;
+- Na reconstrução do devastado Japão com o que se tornou conhecido como sistema Toyota de produção;
+- No movimento de Lean Startups e DevOps do Vale do Silício que culminaram no que hoje é referido como modelo Spotify.
+
+])
+
+Data Mesh #footnote[Data Mesh é um termo cunhado por Zhamak Dehghani. \(referencia?) \#\#\#\# Dados como Produtos - datasets, esteiras, relatórios, - FAIR – Findable: Discoverable, Addressable – Acessible: Natively Accessible, System Agnostic, Format Agnostic – Interoperable – Reusable: Value on its own, Trustworthy - data as code - contratos, data contracts] é uma abordagem para escalar e organizar a arquitetura e plataformas de dados baseada nos princípios do #emph[Domain Driven Design];, automação de precessos e #emph[Design Thinking];.
+
+=== Domínios
+<domínios>
+- Orçamentos, Preços, Custos
+
+=== Governança Compartilhada
+<governança-compartilhada>
+- INDA - Infra-estrutura Nacional de Dados Abertos
+
+=== Infra-estrutura de auto-serviço
+<infra-estrutura-de-auto-serviço>
 - open source
 - DESID Playground
 - ingest, transform, serve
 - Databricks, Snowflake, Redshift, Microsoft Fabric
 
-#block[
-#heading(
-level: 
-3
-, 
-numbering: 
-none
-, 
-[
-Governança Compartilhada
-]
-)
-]
-- INDA - Infra-estrutura Nacional de Dados Abertos
+== Critérios de Sucesso
+<critérios-de-sucesso>
+=== Nível de Maturidade
+<nível-de-maturidade>
+- Institucionalização Nível 1: Ad-Hoc Nível 2: Repetível Nível 3: Contínuo Nível 4: Previsível Nível 5: Em otimização
 
-== Gestão Ágil
-<gestão-ágil>
+== Gestão de Projeto
+<gestão-de-projeto>
 - Scrum based
 - espiral
 - sprints
@@ -613,21 +654,78 @@ Governança Compartilhada
 - falta ferramentas básicas de colaboração e gestão
 - datasus
 
-= Resultado
+= Resultados
 <sec-result>
 == Entregáveis
 <entregáveis>
-+ Plano de Trabalho – Fevereiro 2024 – este documento
-+ Mapeamento de sistemas e processos de geração de dados – Março 2024 – current state of organizational capacity, maturity level – mapeamento produtos de dados existentes – mapeamento desafios organizacionais
-+ Plano de Infra-estrutura e Capacitação – especificação do DESID PLayground \(infraestrutura de desenvolviomento de produtos de dados) – gap de capacidades
-+ Metodologia de Desenvolvimento de Produtos de Dados – documentação de processos
-+ Proposta de Portifólio de Produtos de Dados – mapeamento de potenciais produtos de dados – catálogo de produtos
-+ Apresentação de Produtos de Dados – pelo menos um por domínio: Orçamentos, Preços, Custos, Contas de Saúde
+#figure(
+align(center)[#table(
+  columns: 4,
+  align: (col, row) => (left,left,left,center,).at(col),
+  inset: 6pt,
+  [Entrega], [Data], [Produto], [% Projeto],
+  [1],
+  [02-Fev-2024],
+  [#strike[Plano de Trabalho];],
+  [10%],
+  [2],
+  [04-Mar-2024],
+  [Mapeamento de sistemas e processos de geração de dados],
+  [20%],
+  [3],
+  [01-Abr-2024],
+  [Descrição da Infraestrutura de Desenvolvimento de Produtos de Dados],
+  [20%],
+  [4],
+  [01-Jul-2024],
+  [Mapeamento de potenciais produtos de dados],
+  [20%],
+  [5],
+  [06-Dez-2024],
+  [Apresentação de Produtos de Dados],
+  [30%],
+)]
+)
+
+=== Mapeamento de sistemas e processos de geração de dados
+<mapeamento-de-sistemas-e-processos-de-geração-de-dados>
+- Auto-avaliação do nível de maturidade
+- Mapeamento produtos de dados atuais
+- Mapeamento do gap de capacidades
+
+=== Descrição da Infraestrutura de Desenvolvimento de Produtos de Dados
+<descrição-da-infraestrutura-de-desenvolvimento-de-produtos-de-dados>
+- Especificação DESID Playground
+- Documentação de processos de desenvolvimento de produtos
+- Proposta de plano de capacitação
+
+=== Mapeamento de potenciais produtos de dados
+<mapeamento-de-potenciais-produtos-de-dados>
+- Proposta de catálogo de produtos
+
+=== Apresentação de Produtos de Dados
+<apresentação-de-produtos-de-dados>
+- 1 ou mais produtos do domínio Orçamentos \(SIOPS)
+- 1 ou mais produtos do domínio Preços \(BPS)
+- 1 ou mais produtos do domínio Custos \(ApuraSUS)
+- 1 ou mais produtos do domínio Contas de Saúde \(SHA)
 
 == Cronograma
 <cronograma>
-- gantt chart
+#block[
+#block[
+#block[
+#block[
 
+#block[
+#box(width: 8.17in, image("relatorio_files/figure-typst/mermaid-figure-1.png"))
+
+]
+
+]
+]
+]
+]
 = Conclusão
 <sec-conclusao>
 nível de maturidade 2

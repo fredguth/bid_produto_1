@@ -8,20 +8,19 @@ manuscript:
 
 format:    
   html:
+    css: styles.css
     toc: true
     toc-depth: 2
     section-numbering: 1.1.a
     number-depth: 3
     fig-column: margin
     reference-location: margin
-  typst:
+  typst-pdf:
     keep-typ: true
     toc: true
     toc-depth: 3
     section-numbering: 1.1.a
     number-depth: 3
     papersize: a4
-
-
 
 

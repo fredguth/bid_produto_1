@@ -105,139 +105,174 @@ O presente _Plano de Trabalho_ tem como objetivos:
 ## Método {#sec-metodo}
 
 ### Contexto
-Muitas organizações já estão na terceira geração de suas _plataformas de dados_, com a esperança de obter _insights_ de negócios e tomar decisões rápidas baseadas em evidências. Poucas, porém, podem se dizer verdadeiramente _data-driven_.
+![A imensidão do confuso mercado de ferramentas analíticas.](images/MAD2023.png){.column-page-inset-shaded .lightbox fig-alt="Centenas de logotipos de empresas e produtos que oferecem soluções para análise de dados."}
 
-Apesar disso, o investimento em tecnologia para análise de dados continua crescendo e o mercado está inundado de diferentes ferramentas e plataformas. Cada uma prometendo ser melhor, mais completa e mais fácil de usar que a outra. Mas, na prática, o que vemos é um cenário de confusão e frustração.
+Estima-se que o investimento em ferramentas analíticas tenha superado 80 bilhões de dólares em 2023[@snowflake2020s1]. Muitas organizações já estão na terceira geração de suas _plataformas de dados_, com a esperança de obter _insights_ e tomar decisões rápidas baseadas em evidências. Poucas, porém, podem se dizer verdadeiramente _data-driven_.
 
-![A "explosão cambriana" do mercado de ferramentas analíticas.](images/landscape.jpeg){.column-screen-inset-shaded .lightbox fig-alt="Centenas de logotipos de empresas e produtos que oferecem soluções para análise de dados."}
+::::: {.block fill="yellow.lighten(90%)" outset="1em" radius="6pt" #quadro-plataformas width=70%}
 
-
-- fabricas de software e escritórios de análise
-- mudanças tecnológicas -> inversão da lógica
-- insucesso
-- perdido
-- devops - dataops - engenharia - processos
-- vivendo o passado
-- modern data stack
-
-<!-- ::::: {#quadro-plataformas width=70%}
 **Datawarehouses e BI (primeira geração):**  consolidando dados de diversas fontes, essa estratégia foca na limpeza e verificação dos dados antes de torná-los disponíveis. Essa centralização enfrenta desafios de escalabilidade à medida que as fontes de dados aumentam. Principais artefatos são relatórios e painéis (_dashboards_). Tabelas e relatórios complicados entendidos por poucos especialistas, impacto limitado nos negócios.
 
 **Big Data e Data Lakes (segunda geração):**  Como resposta aos gargalos da geração anterior e aproveitando a redução de custos de _hardware_, _Data Lakes_ armazenam dados em arquivos, com transformações ocorrendo no momento do consumo. Embora ofereça flexibilidade, esta abordagem apresenta desafios quanto à qualidade e documentação dos dados.
 
-**Plataformas em Nuvem (terceira geração):**  semelhante à geração anterior, mas modernizada com: *(*a*)* dados em tempo real (_streams_)*,* *(*b*)* processamento unificado de dados em _batch_ e _stream_  e *(c)* uso intensivo da nuvem. Embora aborde falhas anteriores, ainda carrega problemas das gerações passadas.
+**Plataformas em Nuvem (terceira geração):**  semelhante à geração anterior, mas modernizada com: 
 
-::::: -->
+ - **(a)** dados em tempo real (_streams_);
+ - **(b)** processamento unificado de dados em _batch_ e _stream_; e 
+ - **(c)** uso intensivo da nuvem. Embora aborde falhas anteriores, ainda carrega problemas das gerações passadas.
+
+:::::
+
+
+Entender por que tantas implantações de plataformas de dados não entregam os resultados esperados é essencial para assegurar o sucesso deste projeto. 
+
+Em nossa experiência, muitos projetos pecam por acreditar que basta investimento em tecnologia.  Investimento em capacidade tecnológica, ferramentas e _know-how_, é condição necessária mas não suficiente para se tornar _data-driven_ [@fig-missing-leg].
+
+
+![Investimento em capacidade tecnológica, ferramentas e _know-how_, é condição necessária mais não suficiente para se tornar _data-driven_.](images/missing_leg.svg){.column-margin .lightbox #fig-missing-leg width=90%}
+
+Para compreensão do método a ser adotado no presente projeto, partiremos da definição do problema, explorando-o em todas as suas dimensões.
+
 ### Definição do Problema
-- não é problema puramente tecnológico
-- first principles
-- missão, capacidade, governança 
-- produtos, pessoas e tecnologia, processos
 
 #### Servir como lição: Evolução contínua
 
 ![Serviço como fluxo de valor e feedback; um ciclo.](images/servico.svg){.column-margin .lightbox #fig-servico fig-alt="Fluxo de valor da organização para o usuário, serviço, e do usuário para a organização, feedback." width=90% fig-column=margin}
 
 <!-- Todo serviço deve transformar seu _usuário_ para melhor [^usuario]; um _fluxo de valor_ (@fig-servico) que pode envolver diversas etapas e atendimentos [@quadro-transacional-vs-analitico]. -->
-Todo serviço deve transformar seu _usuário_ para melhor [^usuario]; um _fluxo de valor_ (@fig-servico) que pode envolver diversas etapas e atendimentos.
+Todo serviço deve transformar seu _usuário_ para melhor [^usuario]; um _fluxo de valor_ (@fig-servico) que pode envolver diversas etapas e atendimentos. O SUS atua diariamente para melhorar a saúde dos brasileiros, milhares de vezes por dia. A importância de _servir_ (atender) está fortemente imbuída na cultura do ministério.
 
 [^usuario]: *Usuário* Pessoa ou organização que se beneficia de um serviço. Também chamado de _cliente_.
 
-<!-- ::::: {#quadro-transacional-vs-analitico}
+Cada _transação_ [^transacao] deixa um rastro de dados. A imensa quantidade de dados gerados pelo SUS é visto por alguns como um ativo: essa é uma visão equivocada.  Ativos têm valor quando guardados, mas _dados_ só tem valor quando usados. 
+
+::::: {.block fill="yellow.lighten(90%)" outset="1em" radius="6pt" #quadro-plataformas width=70%}
 **Dados transacionais:** dados primários que sustentam o funcionamento dos serviços diretos ao usuário e mantêm seu estado atual. Também conhecidos como _dados operacionais_.
 
 **Dados analíticos:** dados derivados das bases transacionais (secundários), fornecem visão agregada e histórica dos serviços.
-::::: -->
 
-
-O SUS atua diariamente para melhorar a saúde dos brasileiros, milhares de vezes por dia. A importância de _servir_ (atender) está fortemente imbuída na cultura do ministério.
-
-Cada _transação_ [^transacao] deixa um rastro de dados. A imensa quantidade de dados gerados pelo SUS é visto por alguns como um ativo: essa é uma visão equivocada.  Dados só tem valor quando usados.
+::::: 
 
 [^transacao]: Uma transação é uma execução do serviço, um atendimento.
 
-O _feedback_ do usuário, direto e indireto (via indicadores), fornece informações cruciais para aprimorar o serviço: um fluxo de valor no sentido contrário, do usuário para o serviço.
-
-
-O propósito do SUS vai além de atender o usuário no momento presente, mas também envolve a _evolução contínua_ do serviço [@fig-evolucao], baseada em evidências. Quanto mais rápido o ciclo de _servir_, _analizar_ e _aprender_, mais hipóteses podem ser testadas e mais rápido o serviço evolui.
-
 ![Evolução contínua.](images/evolucao.svg){.column-margin .lightbox fig-alt="Centenas de logotipos de empresas e produtos que oferecem soluções para análise de dados." #fig-evolucao width=50%}
 
-- Evolução Contínua
-- Maestria
-- Pessoas e Processos
+O _feedback_ do usuário, direto e indireto (via indicadores), fornece informações cruciais para aprimorar o serviço: um fluxo de valor no sentido contrário, do usuário para o serviço. O propósito do SUS vai além de atender o usuário no momento presente, mas também envolve a _evolução contínua_ do serviço [@fig-evolucao], baseada em evidências. Quanto mais rápido o ciclo de _servir_, _analizar_ e _aprender_, mais hipóteses podem ser testadas e mais rápido o serviço evolui.
 
-#### Servir como prisão: Evolução perdida
 
-"Nos primeiros quatro meses de 2023, mais de 10,3 mil servidores [1/3 do quadro] da Secretaria de Saúde do Distrito Federal (SES-DF) precisaram de atestados de afastamento do trabalho. Grande parte desses servidores são técnicos em enfermagem"_ @Schwingel2023.  Organizações doentes adoecem pessoas. No serviço público, são servidoras _da ponta_ (enfermeiras,  médicas, professoras) as que mais adoecem. O que está acontecendo?
 
+
+#### Servir como prisão: Evolução perdida {#sec-prisao}
+
+> "Nos primeiros quatro meses de 2023, mais de 10,3 mil servidores [1/3 do quadro] da Secretaria de Saúde do Distrito Federal (SES-DF) precisaram de atestados de afastamento do trabalho. Grande parte desses servidores são técnicos em enfermagem" -- @Schwingel2023.  
+
+Organizações doentes adoecem pessoas. No serviço público, são servidoras _da ponta_, que tem contato direto com usuário, as que mais adoecem. _O que está acontecendo?_
 
 ![O "sistema" moendo pessoas. Arte de _Gerald Scarfe_ para o filme _The Wall_ (1982).](images/grinder.png){.column-margin .lightbox fig-alt="Triângulo com propósito, autonomia e maestria em cada vértice." width=90% #fig-grinder}
 
-Organizações públicas e privadas ainda são majoritariamente estruturadas em silos funcionais [@fig-paredes], com equipes especializadas em áreas como negócio, tecnologia, jurídico, controle; herança da burocracia de Weber e da _gestão científica_ de Taylor do início do século XX.
-
-Esta estrutura exige que cada seviço seja coordenado entre equipes distintas, com diferentes hierarquias, prioridades e linguagens. Como na gincana em que se amarra o pé de uma criança no da outra: sem sincronia, caem as duas e se andam, é no ritmo da mais lenta.
-
-Os servidores _da ponta_ atendem os _usuários reais_ (ex. a mãe precisando de atendimento para o filho), enfrentam a realidade; os servidores _meio_ atendem os servidores mais à ponta, _usuários internos_.
-
-Estar na ponta traz clareza da importância da sua contribuição individual,*senso de *propósito* (@fig-danpink). Ao mesmo tempo, exarceba a sensação de *impotência* diante de uma realidade que não se consegue mudar e que parece que os outros (áreas meio) não enxergam. No setor público,  há ainda o _"requinte de crueldade"_ dos órgão de controle responsabilizarem pessoalmente o gestor _da ponta_ por um serviço que este não controla inteiramente.
-
-
-
 ![Muros organizacionais.](images/paredes3.svg){.column-margin .lightbox fig-alt="times separados tentando sem sucesso coordenar um serviço" width=90% #fig-paredes}
 
+Organizações públicas e privadas ainda são majoritariamente estruturadas em silos funcionais [@fig-paredes], com equipes especializadas em áreas como negócio, tecnologia, jurídico, controle; herança da burocracia de Weber e da _gestão científica_ de Taylor do início do século XX.
+
+Esta estrutura exige que cada serviço seja coordenado entre equipes distintas, com diferentes hierarquias, prioridades e linguagens. A dinâmica lembra a brincadeira da _corrida de três pernas_ das _gincanas infantis_, onde se amarra o pé de um criança ao de outra: a falta de alinhamento entre equipes resulta em atrasos e falhas, fazendo com que o conjunto mova-se ao ritmo imposto pela equipe mais lenta.
+
+Os servidores _da ponta_ atendem os _usuários reais_, enfrentam a realidade; os servidores _meio_ atendem os servidores mais à ponta, _usuários internos_. Estar na ponta traz clareza da importância da sua contribuição individual, **senso de propósito**. Ao mesmo tempo, exarceba a **sensação de impotência** diante de uma realidade que não se tem total autonomia para mudar. 
 
 > O servidor na ponta está preso entre a realidade e o muro organizacional.
-- Governança
-- Organização e Tecnologia
 
+![Auto-motivação segundo Dan Pink (Figura inspirada em _\@sketchplanations_)](images/danpink3.svg){.column-margin .lightbox fig-alt="Triângulo com propósito, autonomia e maestria em cada vértice." width=90% #fig-danpink}
 
+Dan Pink argumenta que a auto-motivação é impulsionada por três elementos fundamentais: autonomia, maestria e propósito [@pink2010drive]. Autonomia refere-se à capacidade de controlar o próprio trabalho; maestria é o desejo de evoluir continuamente em algo que importa; e propósito diz respeito à conexão do trabalho com algo maior e mais significativo. Pink sugere que quando esses três elementos estão presentes, os indivíduos são mais motivados, engajados e produtivos.
+
+Em certa medida, a organização em silos produz a antítese do que a automotivação precisa. 
 
 #### Servir como missão: Evolução orientada
 A gestão orientada a evidências estabelece apenas o método da resposta, mas não o que perguntar, para onde evoluir. Para isso é primordial definir escolhas estratégicas, decisões políticas.
 
-O conceito de "_missões_" em políticas públicas tem sido popularizado pela economista Mariana Mazzucato @Mazzucato2022. Ela destaca a importância de definir objetivos claros, ambiciosos e mensuráveis para orientar a inovação (metas _moonshot_).
+O conceito de "_missões_" em políticas públicas tem sido popularizado pela economista Mariana Mazzucato [@Mazzucato2022]. Ela destaca a importância de definir objetivos claros, ambiciosos e mensuráveis para orientar a inovação, metas _moonshot_.
 
-<!-- ::::: {#quadro-plataformas width=70%}
+::::: {.block fill="yellow.lighten(90%)" outset="1em" radius="6pt" #quadro-plataformas width=70%}
 
 **Moonshot:** Meta ambiciosa, que requer inovação radical para ser atingida. Remete ao projeto Apollo que ambicionou levar humanos à Lua. Difere-se da missão-maior de servir por ser uma missão-meta, com prazo e escopo definidos.
 
 _Ex._ Meta "Três Bilhões" da OMS: @gpw13
+
 - 1 bilhão de pessoas a mais com cobertura universal de saúde.
 - 1 bilhão de pessoas a mais protegidas de emergências de saúde.
 - 1 bilhão de pessoas a mais gozando de melhor saúde e bem-estar.
 
-::::: -->
+:::::
 
 A ambição de uma meta _moonshot_ envolve essencialmente risco. Elas definem concretamente "_onde_" se quer chegar, mas não "_como_". Para  o "_como_" existem "apostas", caminhos-hipótese que se pode testar. Algumas hipóteses vão falhar, mas o aprendizado é parte do processo.
 
-![Auto-motivação segundo Dan Pink. [^sketchplanations]](images/danpink3.svg){.column-margin .lightbox fig-alt="Triângulo com propósito, autonomia e maestria em cada vértice." width=90% #fig-danpink}
 
-[^sketchplanations]: Figura inspirada em \@sketchplanations
+#### Cultura organizacional
 
-<!-- Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que a mudança é feita por pessoas. E que as pessoas são motivadas por propósitos (@fig-danpink). Ao longo dos anos, as lições da teoria sociotécnia foram descobertas, esquecidas e redescobertas várias vezes com diferentes nomes (@quadro-yorkshire). -->
+Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que a mudança é feita por pessoas e que as pessoas são motivadas por propósitos (@fig-danpink).
+Para criar um ambiente em que os indivíduos se auto-motivem, é importante criar uma cultura organizacional adequada. Para isso, é importante pensar em governança.
 
+Governança é o conjunto de políticas, procedimentos, padrões e responsabilidades estabelecidos para orientar e monitorar a gestão e o uso de recursos (incluindo dados, tecnologia e processos) de maneira eficaz e alinhada com os objetivos da organização. A governança garante que haja clareza nas decisões, responsabilidades e que os riscos sejam gerenciados adequadamente, protegendo os interesses de todas as partes envolvidas.
 
-![Arcabouço de Mazzucato.](images/missao.svg){.column-margin .lightbox fig-alt="Triângulo com propósito, autonomia e maestria em cada vértice." width=90% #fig-mazzucato}
-
-Se a missão é a _função objetivo_, os recursos são apenas variáveis, pois são _virtualmente infinitos_, dependem apenas de _vontade política_ (alocação). As restrições são organizacionais.  Em outras palavras, uma meta pode não ser atingida mesmo com recursos ilimitados.
-
+![Governança: Alinhamento e Autonomia.](images/alinha_autonomia.svg){.column-body .lightbox fig-alt="gráfico relacionando alinhamento com autonomia" width=40% #fig-governanca fig-align="center"}
 
 
+A relação entre alinhamento e autonomia determina a governança em uma organização. Quando há pouco alinhamento e pouca autonomia, o resultado tende a ser a uma cultura apática, onde a falta de direção clara e a restrição na tomada de decisão geram desengajamento e falta de iniciativa. Em contraste, um cenário de muito alinhamento com pouca autonomia caracteriza a autocracia, que limita a inovação e a velocidade das mudanças. Por outro lado, pouco alinhamento combinado com muita autonomia pode levar a uma forma de anarquia, onde há esforços descoordenados e ineficiência. 
+
+Muros organizacionais [@sec-prisao] permitem _autocracia_ dentro dos silos e _anarquia_ entre silos. 
+
+O ideal é uma cultura de muito alinhamento e muita autonomia, que propicia decisões ágeis e invadoras. Para tanto, é preciso romper com silos e montar equipes multifuncionais autonomas e responsáveis por um ou mais serviços do início ao fim.
+
+![O arcabouço socio-técnico](images/missao.svg){.column-margin .lightbox fig-alt="Triângulo com missão, governança e capacidade." width=90% #fig-missao}
 
 
-### Síntese
-Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que a mudança é feita por pessoas. E que as pessoas são motivadas por propósitos (@fig-danpink). Ao longo dos anos, as lições da teoria sociotécnia foram descobertas, esquecidas e redescobertas várias vezes com diferentes nomes.
+### Abordagem sociotécnica
 
-![Governança: Alinhamento e Autonomia.](images/alinha_autonomia.svg){.column-margin .lightbox fig-alt="gráfico relacionando alinhamento com autonomia" width=90% #fig-governanca}
+A análise do problema torna transparente que além de direcionamento estratégico (missão) e capacidade técnica, a evolução contínua de um serviço depende de uma cultura organizacional adequada, ou seja, depende de aspectos sociais. Esse é o argumento central da teoria sociotécnica, cujas lições foram descobertas, esquecidas e redescobertas várias vezes com diferentes nomes ao longo dos anos, das minas de carvão de yorkshire, ao vale do silício.
 
-- problema socio técnica
+#### Das minas de carvão de Yorkshire ao Spotify 
+  
+  No final dos anos 1940, o carvão era a principal fonte de energia da Inglaterra. Para apoiar a recostrução industrial pós-guerra, era essencial aumentar a sua produção e reduzir custos. Com esse intuito, introduziram-se novas máquinas nas minas de Yorkshire. A produtividade, contudo, diminuiu.
+
+  Chamados para investigar o problema, pesquisadores do Instituto Tavistock descobriram que as novas máquinas alteraram a dinâmica e cooperação entre os mineiros, que antes trabalhavam em equipes multifuncionais e autônomas com foco na resolução de problemas e alto grau de adaptabilidade.
+
+  Dessa observação nasceu a teoria sociotécnica, que enfatiza a importância de equilibrar tecnologia e relações humanas. Essa lição foi ora esquecida, ora redescoberta em diferentes contextos:
+
+- No esforço de guerra americano que dobrou o PIB em 4 anos;
+- Na reconstrução do devastado Japão com o que se tornou conhecido como sistema Toyota de produção (Lean Manufacturing);
+- No movimento de Lean Startups e DevOps do Vale do Silício que culminaram no que hoje é referido como modelo Spotify.
+
+| Princípio                            | Descrição                                                                            |
+|:-------------------------------------|:-------------------------------------------------------------------------------------|
+| **Foco no Valor**              | Focar em entregar valor aos usuários.                                                          |
+| **Times Multifuncionais**      | Colaboração entre diferentes especialidades para agilizar e melhorar a qualidade do serviço.   |
+| **Autonomia**              | Empoderar equipes para tomar decisões e falhar.                                                |
+| **Alinhamento**            | Garantir alinhamento de padrões e objetivos comuns.                                            |
+| **Entrega Contínua**       | Automatizar com toque humano, reduzindo o tempo entre pedido e feedback do usuário.            |
+| **Feedback Contínuo**      | Utilizar o feedback dos usuários em ciclos rápidos de melhoria.                                |
+| **Melhoria Contínua**      | Otimizar constantemente processos e serviços para alcançar excelência operacional.             |
+| **Eliminação de Desperdícios** | Eliminar atividades que não agregam valor.                                                   |
+| **Comunicação Aberta**     | Promover a transparência e compartilhamento de informações.                                    |
+| **Liderança Servil**       | Apoiar, capacitar e servir às equipes, em vez de direcioná-las.                                 |
+: Os 10 princípios sociotécnicos
 
 
-### Abordagem
-- yorkshire
 
-Data Mesh [^mesh] é uma abordagem para escalar e organizar a arquitetura e plataformas de dados baseada nos princípios do _Domain Driven Design_, automação de precessos e _Design Thinking_.
+
+- DevOps: Abordagem sociotécnica no desenvolvimento de software
+
+- engenharia de software
+- programador vs engenheiros de software
+
+
+
+
+### Abordagem socio-técnica para governança de dados
+
+Data Ops
+
+
+Data Mesh [^mesh] é uma abordagem socio-técnica para escalar e organizar a arquitetura e plataformas de dados baseada nos princípios do _Domain Driven Design_, automação de precessos e _Design Thinking_.
+
 
 [^mesh]: Data Mesh é um termo cunhado por Zhamak Dehghani. (referencia?)
 #### Dados como Produtos
@@ -266,7 +301,11 @@ Data Mesh [^mesh] é uma abordagem para escalar e organizar a arquitetura e plat
 
 #### Nível de Maturidade
 - Institucionalização
-
+Nível 1: Ad-Hoc
+Nível 2: Repetível
+Nível 3: Contínuo
+Nível 4: Previsível
+Nível 5: Em otimização
 
 ### Gestão de Projeto
 - Scrum based
@@ -281,28 +320,81 @@ Data Mesh [^mesh] é uma abordagem para escalar e organizar a arquitetura e plat
 
 ## Resultados {#sec-result} 
 ### Entregáveis
-- tabela
-1. Plano de Trabalho
-    -- Fevereiro 2024 
-    -- este documento
-1. Mapeamento de sistemas e processos de geração de dados
-    -- Março 2024
-    -- current state of organizational capacity, maturity level
-    -- mapeamento produtos de dados existentes
-    -- mapeamento desafios organizacionais
-1. Plano de Infra-estrutura e Capacitação
-    -- especificação do DESID PLayground (infraestrutura de desenvolviomento de produtos de dados)
-    -- gap de capacidades 
-1. Metodologia de Desenvolvimento de Produtos de Dados
-    -- documentação de processos
-1. Proposta de Portifólio de Produtos de Dados
-    -- mapeamento de potenciais produtos de dados
-    -- catálogo de produtos
-1. Apresentação de Produtos de Dados
-    -- pelo menos um por domínio: Orçamentos, Preços, Custos, Contas de Saúde
+
+| Entrega | Data | Produto | % Projeto | 
+|:------|:-----------|:-------------------------------------------|:-------:|
+| 1 | 02-Fev-2024 | ~~Plano de Trabalho~~ | 10% |
+| 2 | 04-Mar-2024 | Mapeamento de sistemas e processos de geração de dados | 20% |
+| 3 | 01-Abr-2024 |Descrição da Infraestrutura de Desenvolvimento de Produtos de Dados | 20% |
+| 4 | 01-Jul-2024 | Mapeamento de potenciais produtos de dados | 20% |
+| 5 | 06-Dez-2024 | Apresentação de Produtos de Dados | 30% |
+
+
+
+####  Mapeamento de sistemas e processos de geração de dados
+ - Auto-avaliação do nível de maturidade 
+ - Mapeamento produtos de dados atuais 
+ - Mapeamento do gap de capacidades
+
+####  Descrição da Infraestrutura de Desenvolvimento de Produtos de Dados
+- Especificação DESID Playground 
+- Documentação de processos de desenvolvimento de produtos
+- Proposta de plano de capacitação
+
+#### Mapeamento de potenciais produtos de dados
+- Proposta de catálogo de produtos
+
+#### Apresentação de Produtos de Dados
+- 1 ou mais produtos do domínio Orçamentos (SIOPS) 
+- 1 ou mais produtos do domínio Preços (BPS) 
+- 1 ou mais produtos do domínio Custos (ApuraSUS) 
+- 1 ou mais produtos do domínio Contas de Saúde (SHA) 
+
+
+
+
 
 ### Cronograma
-- gantt chart
+
+:::{.column-page}
+```{mermaid}
+gantt
+  
+  tickInterval 1month
+  todayMarker off
+  
+
+  title Projeto de Desenvolvimento de Produtos de Dados
+  dateFormat  YYYY-MM-DD
+  axisFormat %d-%b
+  
+  
+    section Plano de Trabalho
+    Concluído            :p1, 2024-01-07, 2024-02-02
+
+    section Mapeamento de sistemas e processos de geração de dados
+    Auto-avaliação do nível de maturidade       : m1, after p1, 1w
+    Mapeamento produtos de dados atuais        : m2, after m1, 2w
+    Mapeamento do gap de capacidades           : m3, after m2, 2024-03-04
+
+    section Descrição da Infraestrutura de Desenvolvimento de Produtos de Dados
+    Documentação de processos                  : d1, after m3, 2w
+    Especificação DESID Playground             : d2, after d1 , 2024-04-01 
+    Proposta de plano de capacitação           : d3, after d1, 2024-04-01
+
+    section Mapeamento de potenciais produtos de dados
+    Documentação processo Desenvolvimento      : c1, after d3, 8w
+    Proposta de catálogo de produtos           : c2, after c1 , 2024-07-01
+    
+    section Apresentação de Produtos de Dados
+    Produtos do domínio Orçamentos (SIOPS)     : a1, after c2  , 2024-11-25
+    Produtos do domínio Preços (BPS)           : a2, after c2  , 2024-11-25
+    Produtos do domínio Custos (ApuraSUS)      : a3, after c2  , 2024-11-25
+    Produtos do domínio Contas de Saúde (SHA)  : a4, after c2  , 2024-11-25
+    Apresentação :after a4, 2024-12-06
+```
+
+:::
 
 ## Conclusão {#sec-conclusao}
 nível de maturidade 2
@@ -315,3 +407,68 @@ nível de maturidade 2
 
 
 
+
+
+
+- **Reconhecimento do Valor de Decisões Baseadas em Evidências:**
+  - Organizações globalmente investem em decisões fundamentadas em dados.
+  - Investimento em ferramentas analíticas superou 80 bilhões de dólares em 2023.
+  
+- **Desafio em Tornar-se Verdadeiramente Orientado por Dados:**
+  - Muitas organizações estão avançando para a terceira geração de plataformas de dados.
+  - Poucas alcançaram o estágio de serem orientadas por dados.
+
+- **Falhas nas Iniciativas de Plataformas de Dados:**
+  - Falhas atribuídas à não aplicação de aprendizados em arquiteturas distribuídas.
+  - Proposta de uma nova arquitetura empresarial de dados: a malha de dados.
+
+- **Saturação do Mercado com Ferramentas Analíticas:**
+  - Mercado inundado com diversas ferramentas, prometendo ser a solução definitiva.
+  - Situação de confusão e frustração devido à "explosão cambriana" de ferramentas.
+
+- **Evolução das Plataformas de Dados:**
+  - De Datawarehouses e BI para Big Data e Data Lakes, e finalmente para Plataformas em Nuvem.
+  - Desafios persistem em escalabilidade, qualidade e documentação dos dados.
+
+- **Natureza Holística do Problema:**
+  - Necessidade de abordagem que englobe missão, capacidade, governança.
+  - Importância da integração de produtos, pessoas, tecnologia e processos.
+  - Exige mudança cultural para valorizar orientação por dados.
+
+
+
+Optei por usar a abordagem de princípios fundamentais para enfrentar nossa questão. Esta estratégia nos permite desmontar o problema até o básico e então reconstruí-lo, evitando soluções prontas e pensamento padrão. Ao questionar as suposições comuns e focar no essencial, temos a chance de encontrar soluções inovadoras e eficientes que poderiam ser ignoradas de outra forma. A força dessa abordagem está na sua capacidade de nos levar a ideias revolucionárias e avanços significativos na solução de problemas complexos.
+
+
+
+
+
+Organizações de todos os tamanhos em todo mundo reconhecem o valor de decisões baseadas em evidências. 
+Estima-se que em 2023, o investimento global em ferramentas analíticas superou 80 bilhões de dólares. 
+
+According to IDC, the markets for Analytics Data Management and Integration Platforms and Business Intelligence and Analytics Tools, which we believe we address, will have a combined value of $56 billion by the end of 2020 and $84 billion by the end of 2023.
+
+
+Muitas organizações já estão na terceira geração de suas _plataformas de dados_, com a esperança de 
+
+
+
+Poucas, porém, podem se dizer verdadeiramente _data-driven_.
+
+
+However what I would like to share with you is an architectural perspective that underpins the failure of many data platform initiatives. I demonstrate how we can adapt and apply the learnings of the past decade in building distributed architectures at scale, to the domain of data; and I will introduce a new enterprise data architecture that I call data mesh.
+
+
+Apesar disso, o investimento em tecnologia para análise de dados continua crescendo e o mercado está inundado de diferentes ferramentas e plataformas. Cada uma prometendo ser melhor, mais completa e mais fácil de usar que a outra. Mas, na prática, o que vemos é um cenário de confusão e frustração com o que chamam de "explosão cambriana" de ferramentas analíticas.
+
+
+
+
+
+- fabricas de software e escritórios de análise
+- mudanças tecnológicas -> inversão da lógica
+- insucesso
+- perdido
+- devops - dataops - engenharia - processos
+- vivendo o passado
+- modern data stack
