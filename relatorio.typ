@@ -247,6 +247,7 @@
   date: [2024-02-01],
   lang: "pt",
   region: "BR",
+  margin: (bottom: 1.5cm,left: 5cm,right: 1cm,top: 1.5cm,),
   paper: "a4",
   sectionnumbering: "1.1.a",
   toc: true,
@@ -633,7 +634,7 @@ A entrega de valor acontece quando novas #emph[funcionalidades] são publicadas 
 
 + #strong[Resistência à Mudança];: Existia uma resistência cultural significativa à mudança dentro das organizações. Isso incluía a hesitação em adotar novas tecnologias e práticas, bem como a dificuldade em quebrar os silos organizacionais existentes.
 
-Por volta dos anos 2000, a Amazon implantava melhoria em sua plataforma de e-commerce em ciclos que duravam de muitos meses e até anos. Já em 2015, o varejista implantava mais de 50 milhões de melhorias por ano \(uma implantação por segundo)#cite(<HowAmazo88:online>);. Em 15 anos a empresa mudou totalmente os seus processos e as inovações criadas no processo deram origem a todo uma nova linha de negócios, a AWS \(Amazon Web Services).
+Por volta dos anos 2000, a Amazon implantava melhoria em sua plataforma de e-commerce em ciclos que duravam de muitos meses e até anos. Já em 2015, o varejista implantava mais de 50 milhões de melhorias por ano \(uma implantação por segundo)#cite(<HowAmazon>);. Em 15 anos a empresa mudou totalmente os seus processos e as inovações criadas no processo deram origem a todo uma nova linha de negócios, a AWS \(Amazon Web Services).
 
 O lançamento do #emph[framework] Rails em 2004 é um marco na trajetória de disseminação de práticas culturais para o desenvolvimento de aplicações web. Surge a ideia de #strong[convenção sobre configuração];, ou seja, a adoção de padrões de processo que tornam possível automatizar tarefas do desenvolvimento.
 

@@ -275,7 +275,7 @@ A entrega de valor acontece quando novas _funcionalidades_ são publicadas e usa
 6. **Resistência à Mudança**: Existia uma resistência cultural significativa à mudança dentro das organizações. Isso incluía a hesitação em adotar novas tecnologias e práticas, bem como a dificuldade em quebrar os silos organizacionais existentes.
 
 
-Por volta dos anos 2000, a Amazon implantava melhoria em sua plataforma de e-commerce em ciclos que duravam de muitos meses e até anos. Já em 2015, o varejista implantava mais de 50 milhões de melhorias por ano (uma implantação por segundo)[@HowAmazo88:online]. Em 15 anos a empresa mudou totalmente os seus processos e as inovações criadas no processo deram origem a todo uma nova linha de negócios, a AWS (Amazon Web Services).
+Por volta dos anos 2000, a Amazon implantava melhoria em sua plataforma de e-commerce em ciclos que duravam de muitos meses e até anos. Já em 2015, o varejista implantava mais de 50 milhões de melhorias por ano (uma implantação por segundo)[@HowAmazon]. Em 15 anos a empresa mudou totalmente os seus processos e as inovações criadas no processo deram origem a todo uma nova linha de negócios, a AWS (Amazon Web Services).
 
 O lançamento do _framework_ Rails em 2004 é um marco na trajetória de disseminação de práticas culturais para o desenvolvimento de aplicações web. Surge a ideia de **convenção sobre configuração**, ou seja, a adoção de padrões de processo que tornam possível automatizar tarefas do desenvolvimento.
 

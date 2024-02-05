@@ -22,5 +22,9 @@ format:
     section-numbering: 1.1.a
     number-depth: 3
     papersize: a4
-
+    margin:
+      right: 1cm
+      left: 5cm
+      top: 1.5cm
+      bottom: 1.5cm
 
