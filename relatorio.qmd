@@ -126,21 +126,20 @@ Estima-se que o investimento em ferramentas analíticas tenha superado 80 bilhõ
 
 Entender por que tantas implantações de plataformas de dados não entregam os resultados esperados é essencial para assegurar o sucesso deste projeto. 
 
-Em nossa experiência, muitos projetos pecam por acreditar que basta investimento em tecnologia.  Investimento em capacidade tecnológica, ferramentas e _know-how_, é condição necessária mas não suficiente para se tornar _data-driven_ [@fig-missing-leg].
-
-
 ![Investimento em capacidade tecnológica, ferramentas e _know-how_, é condição necessária mais não suficiente para se tornar _data-driven_.](images/missing_leg.svg){.column-margin .lightbox #fig-missing-leg width=90%}
+
+Em nossa experiência, muitos projetos pecam por acreditar que basta investimento em tecnologia.  Investimento em capacidade tecnológica, ferramentas e _know-how_, é condição necessária mas não suficiente para uma organização se tornar _data-driven_ [@fig-missing-leg].
 
 Para compreensão do método a ser adotado no presente projeto, partiremos da definição do problema, explorando-o em todas as suas dimensões.
 
 ### Definição do Problema
 
-#### Servir como lição: Evolução contínua
+#### Servir, Aprender e Evoluir
 
 ![Serviço como fluxo de valor e feedback; um ciclo.](images/servico.svg){.column-margin .lightbox #fig-servico fig-alt="Fluxo de valor da organização para o usuário, serviço, e do usuário para a organização, feedback." width=90% fig-column=margin}
 
 <!-- Todo serviço deve transformar seu _usuário_ para melhor [^usuario]; um _fluxo de valor_ (@fig-servico) que pode envolver diversas etapas e atendimentos [@quadro-transacional-vs-analitico]. -->
-Todo serviço deve transformar seu _usuário_ para melhor [^usuario]; um _fluxo de valor_ (@fig-servico) que pode envolver diversas etapas e atendimentos. O SUS atua diariamente para melhorar a saúde dos brasileiros, milhares de vezes por dia. A importância de _servir_ (atender) está fortemente imbuída na cultura do ministério.
+Todo serviço deve transformar seu _usuário_ para melhor [^usuario]; um _fluxo de valor_ que pode envolver diversas etapas e atendimentos ([@fig-servico]). O SUS atua diariamente para melhorar a saúde dos brasileiros, milhares de vezes por dia. A importância de _servir_ (atender) está fortemente imbuída na cultura do Ministério.
 
 [^usuario]: *Usuário* Pessoa ou organização que se beneficia de um serviço. Também chamado de _cliente_.
 
@@ -157,22 +156,21 @@ Cada _transação_ [^transacao] deixa um rastro de dados. A imensa quantidade de
 
 ![Evolução contínua.](images/evolucao.svg){.column-margin .lightbox fig-alt="Centenas de logotipos de empresas e produtos que oferecem soluções para análise de dados." #fig-evolucao width=50%}
 
-O _feedback_ do usuário, direto e indireto (via indicadores), fornece informações cruciais para aprimorar o serviço: um fluxo de valor no sentido contrário, do usuário para o serviço. O propósito do SUS vai além de atender o usuário no momento presente, mas também envolve a _evolução contínua_ do serviço [@fig-evolucao], baseada em evidências. Quanto mais rápido o ciclo de _servir_, _analizar_ e _aprender_, mais hipóteses podem ser testadas e mais rápido o serviço evolui.
+O _feedback_ do usuário, direto e indireto (via indicadores), fornece informações cruciais para aprimorar o serviço: um fluxo de valor no sentido contrário, do usuário para o serviço. O propósito do SUS vai além de atender o usuário no momento presente, mas também envolve a _evolução contínua_ do serviço ([@fig-evolucao],) baseada em evidências. Quanto mais rápido o ciclo de _servir_, _analizar_ e _aprender_, mais hipóteses podem ser testadas e mais rápido o serviço evolui.
 
 
 
+#### Desafios Organizacionais {#sec-prisao}
 
-#### Servir como prisão: Evolução perdida {#sec-prisao}
+![O "sistema" moendo pessoas. Arte de _Gerald Scarfe_ para o filme _The Wall_ (1982).](images/grinder.png){.column-margin .lightbox fig-alt="Triângulo com propósito, autonomia e maestria em cada vértice." width=90% #fig-grinder}
 
 > "Nos primeiros quatro meses de 2023, mais de 10,3 mil servidores [1/3 do quadro] da Secretaria de Saúde do Distrito Federal (SES-DF) precisaram de atestados de afastamento do trabalho. Grande parte desses servidores são técnicos em enfermagem" -- @Schwingel2023.  
 
 Organizações doentes adoecem pessoas. No serviço público, são servidoras _da ponta_, que tem contato direto com usuário, as que mais adoecem. _O que está acontecendo?_
 
-![O "sistema" moendo pessoas. Arte de _Gerald Scarfe_ para o filme _The Wall_ (1982).](images/grinder.png){.column-margin .lightbox fig-alt="Triângulo com propósito, autonomia e maestria em cada vértice." width=90% #fig-grinder}
-
 ![Muros organizacionais.](images/paredes3.svg){.column-margin .lightbox fig-alt="times separados tentando sem sucesso coordenar um serviço" width=90% #fig-paredes}
 
-Organizações públicas e privadas ainda são majoritariamente estruturadas em silos funcionais [@fig-paredes], com equipes especializadas em áreas como negócio, tecnologia, jurídico, controle; herança da burocracia de Weber e da _gestão científica_ de Taylor do início do século XX.
+Organizações públicas e privadas ainda são majoritariamente estruturadas em silos funcionais ([@fig-paredes]), com equipes especializadas em áreas como negócio, tecnologia, jurídico, controle; herança da burocracia de Weber e da _gestão científica_ de Taylor do início do século XX.
 
 Esta estrutura exige que cada serviço seja coordenado entre equipes distintas, com diferentes hierarquias, prioridades e linguagens. A dinâmica lembra a brincadeira da _corrida de três pernas_ das _gincanas infantis_, onde se amarra o pé de um criança ao de outra: a falta de alinhamento entre equipes resulta em atrasos e falhas, fazendo com que o conjunto mova-se ao ritmo imposto pela equipe mais lenta.
 
@@ -184,9 +182,9 @@ Os servidores _da ponta_ atendem os _usuários reais_, enfrentam a realidade; os
 
 Dan Pink argumenta que a auto-motivação é impulsionada por três elementos fundamentais: autonomia, maestria e propósito [@pink2010drive]. Autonomia refere-se à capacidade de controlar o próprio trabalho; maestria é o desejo de evoluir continuamente em algo que importa; e propósito diz respeito à conexão do trabalho com algo maior e mais significativo. Pink sugere que quando esses três elementos estão presentes, os indivíduos são mais motivados, engajados e produtivos.
 
-Em certa medida, a organização em silos produz a antítese do que a automotivação precisa. 
+Em certa medida, a organização em silos produz a antítese das condições para a automotivação. 
 
-#### Servir como missão: Evolução orientada
+#### Evolução orientada a missões {#sec-missoes}
 A gestão orientada a evidências estabelece apenas o método da resposta, mas não o que perguntar, para onde evoluir. Para isso é primordial definir escolhas estratégicas, decisões políticas.
 
 O conceito de "_missões_" em políticas públicas tem sido popularizado pela economista Mariana Mazzucato [@Mazzucato2022]. Ela destaca a importância de definir objetivos claros, ambiciosos e mensuráveis para orientar a inovação, metas _moonshot_.
@@ -206,28 +204,28 @@ _Ex._ Meta "Três Bilhões" da OMS: @gpw13
 A ambição de uma meta _moonshot_ envolve essencialmente risco. Elas definem concretamente "_onde_" se quer chegar, mas não "_como_". Para  o "_como_" existem "apostas", caminhos-hipótese que se pode testar. Algumas hipóteses vão falhar, mas o aprendizado é parte do processo.
 
 
-#### Cultura organizacional
+#### Cultura organizacional {#sec-cultura}
 
-Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que a mudança é feita por pessoas e que as pessoas são motivadas por propósitos (@fig-danpink).
+Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que mudança é feita por pessoas e que as pessoas são motivadas por propósitos (@fig-danpink).
 Para criar um ambiente em que os indivíduos se auto-motivem, é importante criar uma cultura organizacional adequada. Para isso, é importante pensar em governança.
+
+![Governança: Alinhamento e Autonomia.](images/alinha_autonomia.svg){.lightbox fig-alt="gráfico relacionando alinhamento com autonomia" width=90% #fig-governanca fig-align="center"}
+
 
 Governança é o conjunto de políticas, procedimentos, padrões e responsabilidades estabelecidos para orientar e monitorar a gestão e o uso de recursos (incluindo dados, tecnologia e processos) de maneira eficaz e alinhada com os objetivos da organização. A governança garante que haja clareza nas decisões, responsabilidades e que os riscos sejam gerenciados adequadamente, protegendo os interesses de todas as partes envolvidas.
 
-![Governança: Alinhamento e Autonomia.](images/alinha_autonomia.svg){.column-body .lightbox fig-alt="gráfico relacionando alinhamento com autonomia" width=40% #fig-governanca fig-align="center"}
+A relação entre _alinhamento_ e _autonomia_ entre equipes e pessoas determina a governança em uma organização. Quando há pouco alinhamento e pouca autonomia, o resultado tende a ser a uma cultura apática, onde a falta de direção clara e a restrição na tomada de decisão geram desengajamento e falta de iniciativa. Em contraste, um cenário de muito alinhamento com pouca autonomia caracteriza a autocracia, que limita a inovação e a velocidade das mudanças. Por outro lado, pouco alinhamento combinado com muita autonomia pode levar a uma forma de anarquia, onde há esforços descoordenados e ineficiência. 
 
+Muros organizacionais ([@sec-prisao]) favorecem o surgimento de _autocracia_ dentro dos silos e _anarquia_ entre silos. 
 
-A relação entre alinhamento e autonomia determina a governança em uma organização. Quando há pouco alinhamento e pouca autonomia, o resultado tende a ser a uma cultura apática, onde a falta de direção clara e a restrição na tomada de decisão geram desengajamento e falta de iniciativa. Em contraste, um cenário de muito alinhamento com pouca autonomia caracteriza a autocracia, que limita a inovação e a velocidade das mudanças. Por outro lado, pouco alinhamento combinado com muita autonomia pode levar a uma forma de anarquia, onde há esforços descoordenados e ineficiência. 
-
-Muros organizacionais [@sec-prisao] permitem _autocracia_ dentro dos silos e _anarquia_ entre silos. 
-
-O ideal é uma cultura de muito alinhamento e muita autonomia, que propicia decisões ágeis e invadoras. Para tanto, é preciso romper com silos e montar equipes multifuncionais autonomas e responsáveis por um ou mais serviços do início ao fim.
+O ideal é uma cultura ágil, de muito alinhamento e muita autonomia, que propicia decisões rápidas, bem embasadas e invadoras. Para tanto, é preciso romper com silos e montar equipes multifuncionais, autônomas e responsáveis por um ou mais serviços do início ao fim e alinhadas à estragégia maior.
 
 ![O arcabouço socio-técnico](images/missao.svg){.column-margin .lightbox fig-alt="Triângulo com missão, governança e capacidade." width=90% #fig-missao}
 
 
 ### Abordagem sociotécnica
 
-A análise do problema torna transparente que além de direcionamento estratégico (missão) e capacidade técnica, a evolução contínua de um serviço depende de uma cultura organizacional adequada, ou seja, depende de aspectos sociais. Esse é o argumento central da teoria sociotécnica, cujas lições foram descobertas, esquecidas e redescobertas várias vezes com diferentes nomes ao longo dos anos, das minas de carvão de yorkshire, ao vale do silício.
+A análise do problema torna transparente que além de direcionamento estratégico (missão) e capacidade técnica, a evolução contínua de um serviço depende de uma cultura organizacional adequada, ou seja, depende de aspectos sociais. Esse é o argumento central da teoria sociotécnica, cujas lições foram descobertas, esquecidas e redescobertas várias vezes com diferentes nomes ao longo dos anos, das minas de carvão de Yorkshire, ao vale do silício.
 
 #### Das minas de carvão de Yorkshire ao Spotify 
   
@@ -256,67 +254,127 @@ A análise do problema torna transparente que além de direcionamento estratégi
 : Os 10 princípios sociotécnicos
 
 
+#### DevOps: Abordagem sociotécnica no desenvolvimento de software
+
+No início do milênio, a prestação de serviços via web começou a se sofisticar e _sites_ passaram a ficar cada vez mais parecidos com _aplicações_. 
+
+Em grande medida, a _web_, que foi criada como uma plataforma para publicação e consumo de documentos (páginas), é um ambiente hostil para desenvolvimento de _aplicações. Desenvolver _webapps_ envolve coordenar trabalhos muito distintos que vão desde aspectos visuais e de usabilidade (UI/UX), lidar com a diversidade de navegadores e suas respectivas compatibilidades tecnológicas, interoperabilidade com bancos de dados e sistemas de terceiro e questões de manutenção da infra-estrutura.
+
+A entrega de valor acontece quando novas _funcionalidades_ são publicadas e usadas pelos usuários. A evolução do serviço e ganho de competitividade depende de acelerar o ciclo de lançamento, análise e aprendizado. Ainda assim, mesmo entre os líderes de mercado, este era um processo lento, arriscado e custoso e o desenvolvimento de aplicações web envolvia lidar com diversos desafios:
+
+1. **Silos entre Desenvolvimento e Operações**: As equipes de desenvolvimento e operações (negócios) trabalhavam frequentemente em isolamento, com pouca colaboração ou comunicação entre elas. Isso levava a uma transferência ineficaz do software do desenvolvimento para a produção, com operações lutando para gerenciar e manter aplicativos que não compreendiam completamente.
+
+2. **Ciclos de Lançamento Lentos**: Os métodos de desenvolvimento de software tradicionais, como o modelo em cascata, dominavam, levando a ciclos de lançamento longos e inflexíveis. Isso dificultava a capacidade das empresas de responder rapidamente às mudanças no mercado ou às necessidades dos clientes.
+
+3. **Falta de Automação**: A automação em áreas como testes, integração e implantação de software era limitada ou inexistente. Isso resultava em processos manuais propensos a erros, atrasos significativos e uma qualidade de produto inconsistente.
+
+4. **Dificuldades de Escalabilidade e Estabilidade**: Com a popularidade crescente da internet e das aplicações web, as organizações enfrentavam desafios significativos em escalar e manter a estabilidade de seus sistemas sob demanda variável. A falta de práticas e ferramentas adequadas para gerenciar a infraestrutura de TI complicava esses problemas.
+
+5. **Desafios de Qualidade e Confiabilidade**: A falta de práticas contínuas de integração e testes levava frequentemente a bugs de software e problemas de confiabilidade que só eram descobertos após o lançamento. Isso afetava negativamente a experiência do usuário e a reputação das empresas.
+
+6. **Resistência à Mudança**: Existia uma resistência cultural significativa à mudança dentro das organizações. Isso incluía a hesitação em adotar novas tecnologias e práticas, bem como a dificuldade em quebrar os silos organizacionais existentes.
 
 
-- DevOps: Abordagem sociotécnica no desenvolvimento de software
+Por volta dos anos 2000, a Amazon implantava melhoria em sua plataforma de e-commerce em ciclos que duravam de muitos meses e até anos. Já em 2015, o varejista implantava mais de 50 milhões de melhorias por ano (uma implantação por segundo)[@HowAmazo88:online]. Em 15 anos a empresa mudou totalmente os seus processos e as inovações criadas no processo deram origem a todo uma nova linha de negócios, a AWS (Amazon Web Services).
 
-- engenharia de software
-- programador vs engenheiros de software
+O lançamento do _framework_ Rails em 2004 é um marco na trajetória de disseminação de práticas culturais para o desenvolvimento de aplicações web. Surge a ideia de **convenção sobre configuração**, ou seja, a adoção de padrões de processo que tornam possível automatizar tarefas do desenvolvimento.
+
+Já no final dos anos 2000, início dos anos 2010, os aspectos sociotécnicos começaram a ser disseminados e conhecidos como **DevOps** a integração dos silos de desenvolvimento e operações. 
+
+Hoje o desenvolvimento web é muito mais engenharia que arte e processos de:
+
+- contole de versão;
+- testes automatizados;
+- integração contínua (Continuous Integration, CI);
+- implantação contínua (Continuous Deployment, CD);
+
+estão bastante disseminados em toda a indústria.
+
+#### DataOps: Abordagem socio-técnica para Dados
+Nos últimos poucos anos, as equipes responsáveis de gestão e análise de dados despertaram para as vantagens da abordagem socio-técnica e começaram a desenvolver e disseminar metodologia ágeis similares ao DevOps. Esse movimento passou a ser chamado **DataOps**.
+
+### Arcabouço Data Mesh
+
+O presente projeto pretende aplicar uma metodologia sociotécnica chamada **Data Mesh**, proposta por Zhamak Dehghani em 2019 e adotada por empresas como Netflix e PayPal. 
+
+Data Mesh propõe uma arquitetura de dados descentralizada, com foco no design orientado ao domínio e auto-serviço. Inspirado em teorias de design orientado ao domínio e topologias de equipe, o Data Mesh busca escalar a análise de dados através da descentralização, transferindo a responsabilidade dos dados de equipes especialistas em dados para as equipes de domínio (áreas de negócio), com suporte de uma equipe de plataforma de dados.
+
+Data Mesh é baseada em quadtro princípios fundamentais:
+
+1. Dados como Produto;
+1. Propriedade do Domínio;
+1. Plataforma Auto-Serviço de Dados;
+1. Governança Compartilhada.
+
+#### Dados como Produto
+
+Encarar os dados como um produto implica tratá-los com o mesmo nível de cuidado e atenção dedicados ao desenvolvimento de produtos de software. 
+
+Um dado tem valor quando usado e para que seja usado ele precisa ter algumas características identificadas pelo acrônimo _FAIR_:
 
 
+| Princípio FAIR   | Descrição                                        |
+|:------------------|:--------------------------------------------------|
+| Localizável      | Os dados devem ser facilmente descobertos e endereçáveis tanto por humanos quanto por computadores. |              
+| Acessível        | Os dados devem ser nativamente acessíveis e  independentes de sistemas e formatos, permitindo o acesso através de diversas plataformas e  ferramentas.    |
+| Interoperável    | Os dados devem ser capazes de se integrar com  outros conjuntos de dados, aplicações e  processos de trabalho para análise, armazenamento e processamento. |
+| Reutilizável     | Os dados devem possuir valor intrínseco, ser confiáveis e estruturados de forma que suportem sua reutilização em diferentes contextos.|        
 
 
-### Abordagem socio-técnica para governança de dados
+Além dessas características, é importante a _codificação_ de todo o processo de transformação dos dados, o que permite a criação de processos automáticos de documentação, testes e publicação dos dados.
 
-Data Ops
+#### Propriedade do Domínio
 
+Este princípio enfatiza a importância de atribuir a autonomia e responsabilidade dos dados às equipes que estão intimamente ligadas ao domínio específico do negócio. A ideia é que as equipes de domínio, que possuem conhecimento especializado sobre seus respectivos setores, estão melhor posicionadas para gerenciar, curar e atualizar os dados de maneira eficaz. Isso promove uma maior qualidade e relevância dos dados, já que a equipe de domínio entende as nuances e requisitos específicos dos dados que gerencia.
 
-Data Mesh [^mesh] é uma abordagem socio-técnica para escalar e organizar a arquitetura e plataformas de dados baseada nos princípios do _Domain Driven Design_, automação de precessos e _Design Thinking_.
+No contexto do Projeto, os domínios da CGES são:
 
-
-[^mesh]: Data Mesh é um termo cunhado por Zhamak Dehghani. (referencia?)
-#### Dados como Produtos
-- datasets, esteiras, relatórios, 
-- FAIR
-    -- Findable: Discoverable, Addressable
-    -- Acessible: Natively Accessible, System Agnostic, Format Agnostic
-    -- Interoperable
-    -- Reusable: Value on its own, Trustworthy
-- data as code
-- contratos, data contracts
-
-#### Domínios
-- Orçamentos, Preços, Custos
+- Orçamentos
+- Preços
+- Custos
+- SHA
 
 #### Governança Compartilhada
-- INDA - Infra-estrutura Nacional de Dados Abertos
+Este princípio enfatiza a importância de manter padrões e políticas de dados coesos em todos os domínios de uma organização e até entre organizações. 
+
+Além de facilitar a interoperabilidade e automação, a adoção de **convenções** facilita a comunicação entre equipes e reduz a quantidade de decisões de pouca relevância que precisam ser tomadas.
+
+No contexto deste projeto, além de buscar criar políticas de governança compartilhadas entre as coordenações da DESID, buscaremos alinhar nossas políticas a outras áreas como o DEMAS e às políticas da Infra-estrutura Nacional de Dados Abertos (INDA).
 
 #### Infra-estrutura de auto-serviço
-- open source
-- DESID Playground
-- ingest, transform, serve
-- Databricks, Snowflake, Redshift, Microsoft Fabric
+A ideia de uma plataforma de dados auto-serviço é fornecer às equipes as ferramentas e capacidades necessárias para acessar, manipular e analisar dados sem depender excessivamente de suporte técnico especializado. Isso democratiza o acesso aos dados e capacita os usuários finais, permitindo que eles realizem tarefas de dados de forma independente, com agilidade e eficiência. Essas plataformas são projetadas para serem intuitivas e fáceis de usar, reduzindo barreiras para o trabalho com dados.
+
+No contexto deste projeto, será desenvolvida uma plataforma auto-serviço de análise de dados para o  DESID baseada em ferramentas open-source: DESID Playground.  O **DESID Playground** éum dos principais entregáveis do projeto. 
 
 ### Critérios de Sucesso
 
-#### Nível de Maturidade
-- Institucionalização
-Nível 1: Ad-Hoc
-Nível 2: Repetível
-Nível 3: Contínuo
-Nível 4: Previsível
-Nível 5: Em otimização
+O conceito de nível de maturidade é aplicada por diferentes governos e organizações para avaliar qualitativamente a eficácia das práticas de gestão e análise de dados e monitorar a evolução desses processos.  À medida que uma organização avança nos níveis de maturidade, ela implementa práticas de governança de dados mais formalizadas e padronizadas, alcançando maior eficiência, qualidade dos dados e capacidade de inovação.
+
+
+| **Nível** | **Nome**           | **Descrição**                                  |
+|:----:|:------------|:------------------------------------------------------|
+| 1     | Inicial        | Processos ad-hoc, não estruturados e frequentemente caóticos.|
+| 2     | Repetível      | Processos gerenciáveis e repetitivos, mas com pouca formalização.|
+| 3     | Definido       | Processos documentados, padronizados e integrados.       |
+| 4     | Gerenciado     | Processos monitorados e controlados, com melhoria contínua baseada em métricas.|
+| 5     | Otimizado      | Foco na otimização contínua e no uso de dados para inovação e vantagem competitiva.|
+: Níveis de Maturidade de Processos de Governança de Dados
+
+Acreditamos que a melhor forma de medir o sucesso deste projeto é através de uma auto-avaliação da equipe beneficiária (CGES/DESID) do nível de maturidade da análise de dados antes e depois do projeto.
+
+A auto-avaliação inicial é um dos entregáveis da próxima etapa do projeto;
 
 ### Gestão de Projeto
-- Scrum based
-- espiral
-- sprints
-- retrospective
-- no daily
+A gestão do projeto será livremente inspirada na metodologia ágil Scrum:
 
-### Riscos e Mitigações
+- _sprints_ de 2 a 3 semanas para cada domínio;
+- uma reunião de retrospectiva da _sprint_ anterior e planejamento da próxima _sprint_;
+- sem reuniões de alinhamento diário;
+
+
+<!-- ### Riscos e Mitigações
 - falta ferramentas básicas de colaboração e gestão
-- datasus
+- datasus -->
 
 ## Resultados {#sec-result} 
 ### Entregáveis
@@ -349,7 +407,7 @@ Nível 5: Em otimização
 - 1 ou mais produtos do domínio Preços (BPS) 
 - 1 ou mais produtos do domínio Custos (ApuraSUS) 
 - 1 ou mais produtos do domínio Contas de Saúde (SHA) 
-
+- Auto-avaliação do nível de maturidade
 
 
 
@@ -397,7 +455,12 @@ gantt
 :::
 
 ## Conclusão {#sec-conclusao}
-nível de maturidade 2
+
+Este plano de trabalho representa o primeiro entregável de um projeto ambicioso, cujo objetivo principal é promover a evolução da governança da análise de dados da CGES/DESID. 
+
+Esperamos contribuir para uma evolução nas práticas, processos e ferramentas de análise de dados que represente a elevação de pelo menos um nível de maturidade até o término do projeto. 
+
+A descrição dos entregáveis e o cronograma apresentado reflete a nossa melhor estimativa para a conclusão das etapas planejadas. No entanto, caso identifiquemos oportunidades para adiantar as entregas sem comprometer a qualidade, certamente o faremos. Este compromisso não apenas reflete a nossa dedicação em atingir os objetivos estabelecidos, mas também em superar as expectativas da equipe.
 
 ## Referências{.unnumbered}
 
@@ -407,68 +470,3 @@ nível de maturidade 2
 
 
 
-
-
-
-- **Reconhecimento do Valor de Decisões Baseadas em Evidências:**
-  - Organizações globalmente investem em decisões fundamentadas em dados.
-  - Investimento em ferramentas analíticas superou 80 bilhões de dólares em 2023.
-  
-- **Desafio em Tornar-se Verdadeiramente Orientado por Dados:**
-  - Muitas organizações estão avançando para a terceira geração de plataformas de dados.
-  - Poucas alcançaram o estágio de serem orientadas por dados.
-
-- **Falhas nas Iniciativas de Plataformas de Dados:**
-  - Falhas atribuídas à não aplicação de aprendizados em arquiteturas distribuídas.
-  - Proposta de uma nova arquitetura empresarial de dados: a malha de dados.
-
-- **Saturação do Mercado com Ferramentas Analíticas:**
-  - Mercado inundado com diversas ferramentas, prometendo ser a solução definitiva.
-  - Situação de confusão e frustração devido à "explosão cambriana" de ferramentas.
-
-- **Evolução das Plataformas de Dados:**
-  - De Datawarehouses e BI para Big Data e Data Lakes, e finalmente para Plataformas em Nuvem.
-  - Desafios persistem em escalabilidade, qualidade e documentação dos dados.
-
-- **Natureza Holística do Problema:**
-  - Necessidade de abordagem que englobe missão, capacidade, governança.
-  - Importância da integração de produtos, pessoas, tecnologia e processos.
-  - Exige mudança cultural para valorizar orientação por dados.
-
-
-
-Optei por usar a abordagem de princípios fundamentais para enfrentar nossa questão. Esta estratégia nos permite desmontar o problema até o básico e então reconstruí-lo, evitando soluções prontas e pensamento padrão. Ao questionar as suposições comuns e focar no essencial, temos a chance de encontrar soluções inovadoras e eficientes que poderiam ser ignoradas de outra forma. A força dessa abordagem está na sua capacidade de nos levar a ideias revolucionárias e avanços significativos na solução de problemas complexos.
-
-
-
-
-
-Organizações de todos os tamanhos em todo mundo reconhecem o valor de decisões baseadas em evidências. 
-Estima-se que em 2023, o investimento global em ferramentas analíticas superou 80 bilhões de dólares. 
-
-According to IDC, the markets for Analytics Data Management and Integration Platforms and Business Intelligence and Analytics Tools, which we believe we address, will have a combined value of $56 billion by the end of 2020 and $84 billion by the end of 2023.
-
-
-Muitas organizações já estão na terceira geração de suas _plataformas de dados_, com a esperança de 
-
-
-
-Poucas, porém, podem se dizer verdadeiramente _data-driven_.
-
-
-However what I would like to share with you is an architectural perspective that underpins the failure of many data platform initiatives. I demonstrate how we can adapt and apply the learnings of the past decade in building distributed architectures at scale, to the domain of data; and I will introduce a new enterprise data architecture that I call data mesh.
-
-
-Apesar disso, o investimento em tecnologia para análise de dados continua crescendo e o mercado está inundado de diferentes ferramentas e plataformas. Cada uma prometendo ser melhor, mais completa e mais fácil de usar que a outra. Mas, na prática, o que vemos é um cenário de confusão e frustração com o que chamam de "explosão cambriana" de ferramentas analíticas.
-
-
-
-
-
-- fabricas de software e escritórios de análise
-- mudanças tecnológicas -> inversão da lógica
-- insucesso
-- perdido
-- devops - dataops - engenharia - processos
-- vivendo o passado
-- modern data stack
