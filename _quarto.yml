@@ -15,6 +15,9 @@ format:
     number-depth: 3
     fig-column: margin
     reference-location: margin
+    comments:
+      giscus:
+        repo: fredguth/bid_produto_1
   typst-pdf:
     keep-typ: true
     toc: true
