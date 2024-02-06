@@ -1,0 +1,8 @@
+.block {
+    padding: 1em;
+    background-color: lightyellow;
+    font-size: .9rem;
+    border-radius: 1.5em;
+    margin: .5em;
+    color: darkslategrey;
+}
