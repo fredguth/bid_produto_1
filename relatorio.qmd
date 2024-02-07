@@ -129,11 +129,11 @@ Estima-se que o investimento em ferramentas analíticas tenha superado 80 bilhõ
 
 Entender por que tantas implantações de plataformas de dados não entregam os resultados esperados é essencial para assegurar o sucesso deste projeto. 
 
-![Investimento em capacidade tecnológica, ferramentas e _know-how_, é condição necessária mais não suficiente para se tornar _data-driven_.](images/missing_leg.svg){.column-margin .lightbox #fig-missing-leg width=90%}
+![Investimento em capacidade tecnológica, ferramentas e _know-how_ é condição necessária mas não suficiente para se tornar _data-driven_.](images/missing_leg.svg){.column-margin .lightbox #fig-missing-leg width=90%}
 
 Em nossa experiência, muitos projetos pecam por acreditar que basta investimento em tecnologia.  Investimento em capacidade tecnológica, ferramentas e _know-how_, é condição necessária mas não suficiente para uma organização se tornar _data-driven_ [@fig-missing-leg].
 
-Para compreensão do método a ser adotado no presente projeto, partiremos da definição do problema, explorando-o em todas as suas dimensões.
+Para compreensão do método a ser adotado no presente projeto, partiremos da definição do problema explorando-o em todas as suas dimensões.
 
 ### Definição do Problema
 
@@ -146,7 +146,7 @@ Todo serviço deve transformar seu _usuário_ para melhor [^usuario]; um _fluxo 
 
 [^usuario]: *Usuário* Pessoa ou organização que se beneficia de um serviço. Também chamado de _cliente_.
 
-Cada _transação_ [^transacao] deixa um rastro de dados. A imensa quantidade de dados gerados pelo SUS é visto por alguns como um ativo: essa é uma visão equivocada.  Ativos têm valor quando guardados, mas _dados_ só tem valor quando usados. 
+Cada _transação_ [^transacao] deixa um rastro de dados. A imensa quantidade de dados gerados pelo SUS é vista por alguns como um ativo: essa é uma visão equivocada.  Ativos têm valor quando guardados, mas _dados_ só tem valor quando usados. 
 
 ::::: {.block fill="yellow.lighten(90%)" outset="1em" radius="6pt" #quadro-plataformas width=70%}
 **Dados transacionais:** dados primários que sustentam o funcionamento dos serviços diretos ao usuário e mantêm seu estado atual. Também conhecidos como _dados operacionais_.
@@ -221,9 +221,9 @@ A relação entre _alinhamento_ e _autonomia_ entre equipes e pessoas determina 
 
 Muros organizacionais ([@sec-prisao]) favorecem o surgimento de _autocracia_ dentro dos silos e _anarquia_ entre silos. 
 
-O ideal é uma cultura ágil, de muito alinhamento e muita autonomia, que propicia decisões rápidas, bem embasadas e invadoras. Para tanto, é preciso romper com silos e montar equipes multifuncionais, autônomas e responsáveis por um ou mais serviços do início ao fim e alinhadas à estragégia maior.
+O ideal é uma cultura ágil, de muito alinhamento e muita autonomia, que propicia decisões rápidas, bem embasadas e inovadoras. Para tanto, é preciso romper com silos e montar equipes multifuncionais, autônomas e responsáveis por um ou mais serviços do início ao fim e alinhadas à estragégia maior.
 
-![O arcabouço socio-técnico](images/missao.svg){.column-margin .lightbox fig-alt="Triângulo com missão, governança e capacidade." width=90% #fig-missao}
+![O arcabouço sociotécnico](images/missao.svg){.column-margin .lightbox fig-alt="Triângulo com missão, governança e capacidade." width=90% #fig-missao}
 
 
 ### Abordagem sociotécnica
@@ -232,7 +232,7 @@ A análise do problema torna transparente que além de direcionamento estratégi
 
 #### Das minas de carvão de Yorkshire ao Spotify 
   
-  No final dos anos 1940, o carvão era a principal fonte de energia da Inglaterra. Para apoiar a recostrução industrial pós-guerra, era essencial aumentar a sua produção e reduzir custos. Com esse intuito, introduziram-se novas máquinas nas minas de Yorkshire. A produtividade, contudo, diminuiu.
+  No final dos anos 1940, o carvão era a principal fonte de energia da Inglaterra. Para apoiar a reconstrução industrial pós-guerra, era essencial aumentar a sua produção e reduzir custos. Com esse intuito, introduziram-se novas máquinas nas minas de Yorkshire. A produtividade, contudo, diminuiu.
 
   Chamados para investigar o problema, pesquisadores do Instituto Tavistock descobriram que as novas máquinas alteraram a dinâmica e cooperação entre os mineiros, que antes trabalhavam em equipes multifuncionais e autônomas com foco na resolução de problemas e alto grau de adaptabilidade.
 
@@ -261,7 +261,8 @@ A análise do problema torna transparente que além de direcionamento estratégi
 
 No início do milênio, a prestação de serviços via web começou a se sofisticar e _sites_ passaram a ficar cada vez mais parecidos com _aplicações_. 
 
-Em grande medida, a _web_, que foi criada como uma plataforma para publicação e consumo de documentos (páginas), é um ambiente hostil para desenvolvimento de _aplicações. Desenvolver _webapps_ envolve coordenar trabalhos muito distintos que vão desde aspectos visuais e de usabilidade (UI/UX), lidar com a diversidade de navegadores e suas respectivas compatibilidades tecnológicas, interoperabilidade com bancos de dados e sistemas de terceiro e questões de manutenção da infra-estrutura.
+Em grande medida, a _web_, que foi criada como uma plataforma para publicação e consumo de documentos (páginas), é um ambiente hostil para desenvolvimento de _aplicações. Desenvolver aplicações web requer a coordenação de tarefas variadas e complexas. Incluindo design de interfaces visuais e a experiência do usuário (UI/UX), gestão da compatibilidade entre diferentes navegadores, a garantia de interoperabilidade com bancos de dados e sistemas de terceiros, além de cuidar da manutenção da infraestrutura. 
+
 
 A entrega de valor acontece quando novas _funcionalidades_ são publicadas e usadas pelos usuários. A evolução do serviço e ganho de competitividade depende de acelerar o ciclo de lançamento, análise e aprendizado. Ainda assim, mesmo entre os líderes de mercado, este era um processo lento, arriscado e custoso e o desenvolvimento de aplicações web envolvia lidar com diversos desafios:
 
@@ -278,7 +279,7 @@ A entrega de valor acontece quando novas _funcionalidades_ são publicadas e usa
 6. **Resistência à Mudança**: Existia uma resistência cultural significativa à mudança dentro das organizações. Isso incluía a hesitação em adotar novas tecnologias e práticas, bem como a dificuldade em quebrar os silos organizacionais existentes.
 
 
-Por volta dos anos 2000, a Amazon implantava melhoria em sua plataforma de e-commerce em ciclos que duravam de muitos meses e até anos. Já em 2015, o varejista implantava mais de 50 milhões de melhorias por ano (uma implantação por segundo)[@HowAmazon]. Em 15 anos a empresa mudou totalmente os seus processos e as inovações criadas no processo deram origem a todo uma nova linha de negócios, a AWS (Amazon Web Services).
+Por volta dos anos 2000, a Amazon implantava melhoria em sua plataforma de e-commerce em ciclos que duravam de muitos meses e até anos. Já em 2015, o varejista implantava mais de 50 milhões de melhorias por ano (uma implantação por segundo) [@HowAmazon]. Em 15 anos a empresa mudou totalmente os seus processos e as inovações criadas no processo deram origem a toda uma nova linha de negócios, a AWS (Amazon Web Services).
 
 O lançamento do _framework_ Rails em 2004 é um marco na trajetória de disseminação de práticas culturais para o desenvolvimento de aplicações web. Surge a ideia de **convenção sobre configuração**, ou seja, a adoção de padrões de processo que tornam possível automatizar tarefas do desenvolvimento.
 
@@ -286,27 +287,27 @@ Já no final dos anos 2000, início dos anos 2010, os aspectos sociotécnicos co
 
 Hoje o desenvolvimento web é muito mais engenharia que arte e processos de:
 
-- contole de versão;
+- controle de versão;
 - testes automatizados;
 - integração contínua (Continuous Integration, CI);
 - implantação contínua (Continuous Deployment, CD);
 
 estão bastante disseminados em toda a indústria.
 
-#### DataOps: Abordagem socio-técnica para Dados
-Nos últimos poucos anos, as equipes responsáveis de gestão e análise de dados despertaram para as vantagens da abordagem socio-técnica e começaram a desenvolver e disseminar metodologia ágeis similares ao DevOps. Esse movimento passou a ser chamado **DataOps**.
+#### DataOps: Abordagem sociotécnica para Dados
+Nos últimos poucos anos, as equipes responsáveis de gestão e análise de dados despertaram para as vantagens da abordagem sociotécnica e começaram a desenvolver e disseminar metodologia ágeis similares ao DevOps. Esse movimento passou a ser chamado **DataOps**.
 
 ### Arcabouço Data Mesh
 
 O presente projeto pretende aplicar uma metodologia sociotécnica chamada **Data Mesh**, proposta por Zhamak Dehghani em 2019 e adotada por empresas como Netflix e PayPal. 
 
-Data Mesh propõe uma arquitetura de dados descentralizada, com foco no design orientado ao domínio e auto-serviço. Inspirado em teorias de design orientado ao domínio e topologias de equipe, o Data Mesh busca escalar a análise de dados através da descentralização, transferindo a responsabilidade dos dados de equipes especialistas em dados para as equipes de domínio (áreas de negócio), com suporte de uma equipe de plataforma de dados.
+Data Mesh propõe uma arquitetura de dados descentralizada, com foco no design orientado ao domínio e autosserviço. Inspirado em teorias de design orientado ao domínio e topologias de equipe, o Data Mesh busca escalar a análise de dados através da descentralização, transferindo a responsabilidade dos dados de equipes especialistas em dados para as equipes de domínio (áreas de negócio), com suporte de uma equipe de plataforma de dados.
 
-Data Mesh é baseada em quadtro princípios fundamentais:
+Os quatro princípios fundamentais do Data Mesh são:
 
 1. Dados como Produto;
 1. Propriedade do Domínio;
-1. Plataforma Auto-Serviço de Dados;
+1. Plataforma Autosserviço de Dados;
 1. Governança Compartilhada.
 
 #### Dados como Produto
@@ -342,16 +343,16 @@ Este princípio enfatiza a importância de manter padrões e políticas de dados
 
 Além de facilitar a interoperabilidade e automação, a adoção de **convenções** facilita a comunicação entre equipes e reduz a quantidade de decisões de pouca relevância que precisam ser tomadas.
 
-No contexto deste projeto, além de buscar criar políticas de governança compartilhadas entre as coordenações da DESID, buscaremos alinhar nossas políticas a outras áreas como o DEMAS e às políticas da Infra-estrutura Nacional de Dados Abertos (INDA).
+No contexto deste projeto, além de buscar criar políticas de governança compartilhadas entre as coordenações da DESID, buscaremos alinhar nossas políticas a outras áreas como o DEMAS e às políticas da Infraestrutura Nacional de Dados Abertos (INDA).
 
-#### Infra-estrutura de auto-serviço
-A ideia de uma plataforma de dados auto-serviço é fornecer às equipes as ferramentas e capacidades necessárias para acessar, manipular e analisar dados sem depender excessivamente de suporte técnico especializado. Isso democratiza o acesso aos dados e capacita os usuários finais, permitindo que eles realizem tarefas de dados de forma independente, com agilidade e eficiência. Essas plataformas são projetadas para serem intuitivas e fáceis de usar, reduzindo barreiras para o trabalho com dados.
+#### Infraestrutura de autosserviço
+A ideia de uma plataforma de dados autosserviço é fornecer às equipes as ferramentas e capacidades necessárias para acessar, manipular e analisar dados sem depender excessivamente de suporte técnico especializado. Isso democratiza o acesso aos dados e capacita os usuários finais, permitindo que eles realizem tarefas de dados de forma independente, com agilidade e eficiência. Essas plataformas são projetadas para serem intuitivas e fáceis de usar, reduzindo barreiras para o trabalho com dados.
 
-No contexto deste projeto, será desenvolvida uma plataforma auto-serviço de análise de dados para o  DESID baseada em ferramentas open-source: DESID Playground.  O **DESID Playground** éum dos principais entregáveis do projeto. 
+No contexto deste projeto, será desenvolvida uma plataforma autosserviço de análise de dados para o  DESID baseada em ferramentas open-source: DESID Playground.  O **DESID Playground** é um dos principais entregáveis do projeto. 
 
 ### Critérios de Sucesso
 
-O conceito de nível de maturidade é aplicada por diferentes governos e organizações para avaliar qualitativamente a eficácia das práticas de gestão e análise de dados e monitorar a evolução desses processos.  À medida que uma organização avança nos níveis de maturidade, ela implementa práticas de governança de dados mais formalizadas e padronizadas, alcançando maior eficiência, qualidade dos dados e capacidade de inovação.
+O conceito de nível de maturidade é aplicado por diferentes governos e organizações para avaliar qualitativamente a eficácia das práticas de gestão e análise de dados e monitorar a evolução desses processos.  À medida que uma organização avança nos níveis de maturidade, ela implementa práticas de governança de dados mais formalizadas e padronizadas, alcançando maior eficiência, qualidade dos dados e capacidade de inovação.
 
 
 | **Nível** | **Nome**           | **Descrição**                                  |
@@ -368,11 +369,11 @@ Acreditamos que a melhor forma de medir o sucesso deste projeto é através de u
 A auto-avaliação inicial é um dos entregáveis da próxima etapa do projeto;
 
 ### Gestão de Projeto
-A gestão do projeto será livremente inspirada na metodologia ágil Scrum:
+A gestão do projeto adotará práticas inspiradas na metodologia ágil Scrum, incluindo:
 
 - _sprints_ de 2 a 3 semanas para cada domínio;
 - uma reunião de retrospectiva da _sprint_ anterior e planejamento da próxima _sprint_;
-- sem reuniões de alinhamento diário;
+- omitindo reuniões de alinhamento diário;
 
 
 <!-- ### Riscos e Mitigações
