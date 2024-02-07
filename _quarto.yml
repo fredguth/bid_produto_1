@@ -16,8 +16,7 @@ format:
     fig-column: margin
     reference-location: margin
     comments:
-      giscus:
-        repo: fredguth/bid_produto_1
+      hypothesis: true
   desid-report-typst:
     keep-typ: true
     toc: true
