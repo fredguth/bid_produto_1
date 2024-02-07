@@ -149,64 +149,137 @@
 }
 
 
-
-#let article(
+#let report(
   title: none,
+  subtitle: none,
   authors: none,
   date: none,
   abstract: none,
+  iadb_contract: none,
+  iadb_project: none,
+  iadb_product: none,
   cols: 1,
-  margin: (x: 1.25in, y: 1.25in),
-  paper: "us-letter",
-  lang: "en",
-  region: "US",
+  lang: "pt",
+  region: "BR",
   font: (),
-  fontsize: 11pt,
+  fontsize: 10pt,
   sectionnumbering: none,
   toc: false,
-  toc_title: none,
-  toc_depth: none,
+  toc-depth: none,
+  bib_syle: "apa",
+  theme: (
+    color: blue.darken(30%),
+    serif: "Harding Text Web",
+    sans: "Lato",
+    mono: "SF Mono",
+    normal: 10pt,
+    small: 8pt,
+  ),
   doc,
 ) = {
   set page(
-    paper: paper,
-    margin: margin,
+    paper: "a4",
+    margin: (inside: 1cm, top: 1.5cm, outside: 1cm, bottom: 1.5cm),
     numbering: "1",
+    header-ascent: .5cm,
+    footer-descent: .5cm,
+    header: locate(loc => {
+      if (loc.page() != 1) {
+        block(
+          width: 100%,
+          stroke: (bottom: 1pt + gray),
+          inset: (bottom: 8pt, right: 2pt, left: 2pt),
+          [ #set text(font: theme.sans, size: theme.small, fill: gray.darken(50%))
+            #grid(
+              columns: (1fr, 1fr),
+              align(left, []),
+              align(right, text(weight: "bold", upper[Relatório])),
+            ) ],
+        )
+      }
+    }),
+    footer: block(
+      width: 100%,
+      stroke: (top: 1pt + gray),
+      inset: (top: 8pt, right: 2pt),
+      [
+        #set text(font: theme.sans, size: theme.small, fill: gray.darken(50%))
+        #grid(
+          columns: (75%, 25%),
+          align(left)[#date],
+          align(
+            right
+          )[#counter(page).display() de #locate((loc) => { counter(page).final(loc).first() })],
+        )
+      ],
+    )
   )
   set par(justify: true)
   set text(lang: lang,
            region: region,
-           font: font,
-           size: fontsize)
+           historical-ligatures: true,
+           ligatures: true,
+           font: theme.sans,
+           size: theme.normal)
+  
   set heading(numbering: sectionnumbering)
 
   if title != none {
-    align(center)[#block(inset: 2em)[
-      #text(weight: "bold", size: 1.5em)[#title]
-    ]]
+    text(font: theme.sans, fill: gray.lighten(60%), upper[Relatório])
+    v(.2cm)
+    text(font: theme.serif, size: 20pt, weight: "black", title)
+    if subtitle != none {
+      v(-.3cm)
+      text(font: theme.serif, size: 16pt, weight: "light", subtitle)
+    }
+    v(1cm)
+    line(length: 100%, stroke: 2pt + theme.color)
+    v(1cm)
   }
+ 
+  grid(columns: (62%, 3%, 35%), text(font: theme.serif, doc) ,[], {
+    if authors != none {
+       
+      if toc {
+        block(above: 2em, below: 2em)[
+          #outline(
+            title: auto,
+            depth: 1,
+            indent: auto
+          );
+        ]
+     } 
+      place(dy:6.5cm, block(fill: blue.lighten(95%),width: 100%,inset: 1em,radius: 6pt)[
+        #for (author) in authors [
+          #if author.role!= none [*#author.role*]
 
-  if authors != none {
-    let count = authors.len()
-    let ncols = calc.min(count, 3)
-    grid(
-      columns: (1fr,) * ncols,
-      row-gutter: 1.5em,
-      ..authors.map(author =>
-          align(center)[
-            #author.name \
-            #author.affiliation \
-            #author.email
-          ]
-      )
-    )
-  }
+          #h(1em)#author.name #if author.affiliation!=none {text(font: theme.mono, size: theme.small)[(#author.affiliation)]}
+          #if author.email!=none [#v(-.5em)#h(1em)#text(size: theme.small, author.email)]
+          
+        ]
+        #if iadb_contract != none [
+          *Contrato*\
+          #h(1em)#text(size: theme.small, iadb_contract)
+        ]
+        #if iadb_project != none [
+          *Projeto*\
+          #text(size: theme.small, pad(left: 1em,[#iadb_project]))
+          
+        ]
+          #if iadb_product != none [
+          *Produto*\
+          #h(1em)#text(size: theme.small, iadb_product)
+          
+        ]
+      ])
+    }
 
-  if date != none {
-    align(center)[#block(inset: 1em)[
-      #date
-    ]]
-  }
+    
+  })
+
+
+
+
 
   if abstract != none {
     block(inset: 2em)[
@@ -214,45 +287,36 @@
     ]
   }
 
-  if toc {
-    let title = if toc_title == none {
-      auto
-    } else {
-      toc_title
-    }
-    block(above: 0em, below: 2em)[
-    #outline(
-      title: toc_title,
-      depth: toc_depth
-    );
-    ]
-  }
+  
 
-  if cols == 1 {
-    doc
-  } else {
-    columns(cols, doc)
-  }
 }
-#show: doc => article(
+
+
+#show: doc => report(
   title: [Plano de Trabalho],
+  subtitle: [Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde
+
+],
   authors: (
     ( name: [Frederico Guth],
+      role: [Autor ],
+      corresponding: [true],
       affiliation: [BID],
       email: [frederico.guth\@saude.gov.br] ),
     ( name: [Gabriel Squeff],
+      role: [Responsável ],
+      corresponding: [],
       affiliation: [CGES/DESID/MS],
       email: [gabriel.squeff\@saude.gov.br] ),
     ),
+  iadb_contract: [Cooperação Técnica BR-T1550 \(BID/MS)],
+  iadb_project: [Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde],
+  iadb_product: [Produto 1],
   date: [2024-02-01],
   lang: "pt",
   region: "BR",
-  margin: (bottom: 1.5cm,left: 5cm,right: 1cm,top: 1.5cm,),
-  paper: "a4",
   sectionnumbering: "1.1.a",
   toc: true,
-  toc_title: [Índice],
-  toc_depth: 3,
   cols: 1,
   doc,
 )
@@ -292,7 +356,7 @@ A coordenação identificou a necessidade urgente e prioritária de fortalecer s
 
 Essa necessidade se torna ainda mais crítica com a responsabilidade assumida pela CGES na produção futura do Sistema de Contas de Saúde \(SHA), em cooperação com a a Organização para a Cooperação e Desenvolvimento Econômico \(OCDE) e outras instituições governamentais brasileiras.
 
-- criação do Núcleo de Engenharia de Dados \(NErD)
+Por esses motivo, a CGES está criando o Núcleo de Engenharia de Dados da DESID \(NErD) que o presente projeto ajudará a organizar.
 
 == Objetivos do Projeto
 <objetivos-do-projeto>
@@ -847,7 +911,7 @@ numbering:
 none
 , 
 [
-Referências
+Bibliografia
 ]
 )
 ]

@@ -9,12 +9,12 @@ author:
     email: frederico.guth@saude.gov.br
     affiliations:
       - BID
-    role: autor
+    role: Autor
   - name: Gabriel Squeff
     email: gabriel.squeff@saude.gov.br
     affiliations:
       - CGES/DESID/MS
-    role: revisor
+    role: Responsável
 keywords:
   - Plano de Trabalho
   - Produto 1
@@ -35,6 +35,10 @@ citation:
   number: 1
   producer:  "Cooperação Técnica BR-T1550 (BID/MS)"
 
+iadb:
+  contract: Cooperação Técnica BR-T1550 (BID/MS)
+  project: Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde
+  product: Produto 1
 
 number-sections: true
 jupyter: python3
@@ -66,8 +70,7 @@ A coordenação identificou a necessidade urgente e prioritária de fortalecer s
 
 Essa necessidade se torna ainda mais crítica com a responsabilidade assumida pela CGES na produção futura do Sistema de Contas de Saúde (SHA), em cooperação com a a Organização para a Cooperação e Desenvolvimento Econômico (OCDE) e outras instituições governamentais brasileiras.
 
-- criação do Núcleo de Engenharia de Dados (NErD)
-
+Por esses motivo, a CGES está criando o Núcleo de Engenharia de Dados da DESID (NErD) que o presente projeto ajudará a organizar.
 
 ### Objetivos do Projeto
 
@@ -105,7 +108,7 @@ O presente _Plano de Trabalho_ tem como objetivos:
 ## Método {#sec-metodo}
 
 ### Contexto
-![A imensidão do confuso mercado de ferramentas analíticas.](images/MAD2023.png){.column-page-inset-shaded .lightbox fig-alt="Centenas de logotipos de empresas e produtos que oferecem soluções para análise de dados."}
+![A imensidão do confuso mercado de ferramentas analíticas.](images/MAD2023.png){.lightbox fig-alt="Centenas de logotipos de empresas e produtos que oferecem soluções para análise de dados."}
 
 Estima-se que o investimento em ferramentas analíticas tenha superado 80 bilhões de dólares em 2023[@snowflake2020s1]. Muitas organizações já estão na terceira geração de suas _plataformas de dados_, com a esperança de obter _insights_ e tomar decisões rápidas baseadas em evidências. Poucas, porém, podem se dizer verdadeiramente _data-driven_.
 
@@ -462,7 +465,7 @@ Esperamos contribuir para uma evolução nas práticas, processos e ferramentas 
 
 A descrição dos entregáveis e o cronograma apresentado reflete a nossa melhor estimativa para a conclusão das etapas planejadas. No entanto, caso identifiquemos oportunidades para adiantar as entregas sem comprometer a qualidade, certamente o faremos. Este compromisso não apenas reflete a nossa dedicação em atingir os objetivos estabelecidos, mas também em superar as expectativas da equipe.
 
-## Referências{.unnumbered}
+## Bibliografia {.unnumbered}
 
 ::: {#refs}
 :::

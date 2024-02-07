@@ -18,16 +18,10 @@ format:
     comments:
       giscus:
         repo: fredguth/bid_produto_1
-  typst-pdf:
+  desid-report-typst:
     keep-typ: true
     toc: true
-    toc-depth: 3
+    toc-depth: 1
     section-numbering: 1.1.a
     number-depth: 3
-    papersize: a4
-    margin:
-      right: 1cm
-      left: 5cm
-      top: 1.5cm
-      bottom: 1.5cm
 
