@@ -294,7 +294,7 @@
 
 #show: doc => report(
   title: [Plano de Trabalho],
-  subtitle: [Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde
+  subtitle: [Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia e Desenvolvimento em Saúde
 
 ],
   authors: (
@@ -303,16 +303,11 @@
       corresponding: [true],
       affiliation: [BID],
       email: [frederico.guth\@saude.gov.br] ),
-    ( name: [Gabriel Squeff],
-      role: [Responsável ],
-      corresponding: [],
-      affiliation: [CGES/DESID/MS],
-      email: [gabriel.squeff\@saude.gov.br] ),
     ),
   iadb_contract: [Cooperação Técnica BR-T1550 \(BID/MS)],
-  iadb_project: [Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde],
+  iadb_project: [Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia e Desenvolvimento em Saúde],
   iadb_product: [Produto 1],
-  date: [2024-02-01],
+  date: [2024-02-08],
   lang: "pt",
   region: "BR",
   sectionnumbering: "1.1.a",
@@ -324,7 +319,7 @@
 
 = Introdução
 <sec-intro>
-O presente projeto é uma iniciativa de 12 meses no âmbito da #emph[Cooperação Técnica BR-T1550] do Ministério da Saúde com o Banco Inter-americano de Desenvolvimento \(BID). Seu objetivo maior é fortalecer a capacidade de análise de dados do Departamento de Economia da Saúde, Investimento e Desempenho \(DESID/MS), integrando técnicas avançadas de ciência de dados e preparando a organização para a adoção de modelos de inteligência artificial.
+O presente projeto é uma iniciativa de 12 meses no âmbito da #emph[Cooperação Técnica BR-T1550] do Ministério da Saúde com o Banco Inter-americano de Desenvolvimento \(BID). Seu objetivo maior é fortalecer a capacidade de análise de dados do Departamento de Economia e Desenvolvimento em Saúde \(DESID/MS), integrando técnicas avançadas de ciência de dados e preparando a organização para a adoção de modelos de inteligência artificial.
 
 == Motivação
 <motivação>
@@ -333,7 +328,7 @@ O presente projeto é uma iniciativa de 12 meses no âmbito da #emph[Cooperaçã
 ], caption: figure.caption(
 position: bottom, 
 [
-Sistemas são meios e não fins.
+Sistemas são meios e não fins. \(Todas imagens desse relatório são do próprio autor, exceto quando explicitado em contrário.)
 ]), 
 kind: "quarto-float-fig", 
 supplement: "Figure", 
@@ -344,19 +339,13 @@ numbering: "1",
 
 A Coordenação-Geral de Informações em Economia da Saúde \(CGES/DESID) é uma área multidiprofissional e interdisciplinar responsável por importantes sistemas de registro de informações econômicas de saúde \(SIOPS, BPS e ApuraSUS) e pelo uso desses dados para fornecer evidências econômicas para formulação de políticas, diretrizes e metas para a contínua melhoria do Sistema Único de Saúde \(SUS).
 
-#quote(block: true)[
-Os sistemas não são fins em si mesmos. Mais Economia!
-
-— Gabriel Squeff
-]
-
-Desde o início de 2023, a CGES tem investido em melhorias para automatizar e reduzir esforços na obtenção dos registros e aumentar a produção de evidências econômicas baseadas na análise de dados. Tais evidências são a missão principal da DESID e subsidiam a formulação de políticas, diretrizes e metas para que as ações e serviços de saúde sejam prestados de forma eficiente, equitativa e com qualidade para melhor acesso da população, atendendo aos princípios da universalidade, igualdade e integralidade da atenção à saúde estabelecidos constitucionalmente para o Sistema Único de Saúde \(SUS).
+Desde o início de 2023, a CGES tem investido em melhorias para automatizar e reduzir esforços na obtenção dos registros e aumentar a produção de evidências econômicas baseadas na análise de dados. Tais evidências são a missão principal da DESID e subsidiam a formulação de políticas, diretrizes e metas para que as ações e serviços públicos de saúde sejam prestados de forma eficiente, equitativa e com qualidade para melhor acesso da população, atendendo aos princípios da universalidade, igualdade e integralidade da atenção à saúde estabelecidos constitucionalmente para o Sistema Único de Saúde \(SUS).
 
 A coordenação identificou a necessidade urgente e prioritária de fortalecer suas capacidades de análise de dados, uma vez que conta atualmente com reduzida equipe especializada na área, a maior parte das análises ainda é realizada apenas em planilhas e os processos de ingestão e transformação de dados são #emph[ad-hoc] e não institucionalizados.
 
 Essa necessidade se torna ainda mais crítica com a responsabilidade assumida pela CGES na produção futura do Sistema de Contas de Saúde \(SHA), em cooperação com a a Organização para a Cooperação e Desenvolvimento Econômico \(OCDE) e outras instituições governamentais brasileiras.
 
-Por esses motivo, a CGES está criando o Núcleo de Engenharia de Dados da DESID \(NErD) que o presente projeto ajudará a organizar.
+Por esses motivo, a CGES está criando o Núcleo de Ciência de Dados da DESID \(NCD) que o presente projeto ajudará a organizar.
 
 == Objetivos do Projeto
 <objetivos-do-projeto>
@@ -371,7 +360,7 @@ Por esses motivo, a CGES está criando o Núcleo de Engenharia de Dados da DESID
 - Desenvolvimento de plano de infraestrutura técnica e capacitação da equipe.
 - Desenvolvimento de metodologia de desenvolvimento de produtos de dados.
 - Desenvolvimento de proposta de portfólio de produtos de dados.
-- Desenvolvimento de produtos de dados: esteiras de dados, relatórios, indicadores, datasets etc.
+- Desenvolvimento de produtos de dados: datasets, esteiras de dados, relatórios, painéis etc.
 
 == Este documento
 <este-documento>
@@ -383,7 +372,7 @@ align(center)[#table(
   [#strong[Contrato];],
   [Cooperação Técnica BR-T1550],
   [#strong[Projeto];],
-  [Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde],
+  [Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia e Desenvolvimento em Saúde do Ministério da Saúde],
   [#strong[Produto];],
   [Entregável 1 - Plano de Trabalho],
 )]
@@ -434,14 +423,12 @@ width:70%,
 
 ])
 
-Entender por que tantas implantações de plataformas de dados não entregam os resultados esperados é essencial para assegurar o sucesso deste projeto.
-
 #figure([
 #box(width: 90%,image("images/missing_leg.svg"))
 ], caption: figure.caption(
 position: bottom, 
 [
-Investimento em capacidade tecnológica, ferramentas e #emph[know-how];, é condição necessária mais não suficiente para se tornar #emph[data-driven];.
+Investimento em capacidade tecnológica, ferramentas e #emph[know-how] é condição necessária mas não suficiente para se tornar #emph[data-driven];.
 ]), 
 kind: "quarto-float-fig", 
 supplement: "Figure", 
@@ -450,9 +437,11 @@ numbering: "1",
 <fig-missing-leg>
 
 
+Entender por que tantas implantações de plataformas de dados não entregam os resultados esperados é essencial para assegurar o sucesso deste projeto.
+
 Em nossa experiência, muitos projetos pecam por acreditar que basta investimento em tecnologia. Investimento em capacidade tecnológica, ferramentas e #emph[know-how];, é condição necessária mas não suficiente para uma organização se tornar #emph[data-driven] @fig-missing-leg.
 
-Para compreensão do método a ser adotado no presente projeto, partiremos da definição do problema, explorando-o em todas as suas dimensões.
+Para compreensão do método a ser adotado no presente projeto, partiremos da definição do problema explorando-o em todas as suas dimensões.
 
 == Definição do Problema
 <definição-do-problema>
@@ -474,7 +463,7 @@ numbering: "1",
 
 Todo serviço deve transformar seu #emph[usuário] para melhor #footnote[#emph[Usuário] Pessoa ou organização que se beneficia de um serviço. Também chamado de #emph[cliente];.];; um #emph[fluxo de valor] que pode envolver diversas etapas e atendimentos \(@fig-servico). O SUS atua diariamente para melhorar a saúde dos brasileiros, milhares de vezes por dia. A importância de #emph[servir] \(atender) está fortemente imbuída na cultura do Ministério.
 
-Cada #emph[transação] #footnote[Uma transação é uma execução do serviço, um atendimento.] deixa um rastro de dados. A imensa quantidade de dados gerados pelo SUS é visto por alguns como um ativo: essa é uma visão equivocada. Ativos têm valor quando guardados, mas #emph[dados] só tem valor quando usados.
+Cada #emph[transação] #footnote[Uma transação é uma execução do serviço, um atendimento.] deixa um rastro de dados. A imensa quantidade de dados gerados pelo SUS é vista por alguns como um ativo: essa é uma visão equivocada. Ativos têm valor quando guardados, mas #emph[dados] só tem valor quando usados.
 
 #block(
 fill:yellow.lighten(90%),
@@ -572,7 +561,7 @@ Em certa medida, a organização em silos produz a antítese das condições par
 <sec-missoes>
 A gestão orientada a evidências estabelece apenas o método da resposta, mas não o que perguntar, para onde evoluir. Para isso é primordial definir escolhas estratégicas, decisões políticas.
 
-O conceito de "#emph[missões];" em políticas públicas tem sido popularizado pela economista Mariana Mazzucato #cite(<Mazzucato2022>);. Ela destaca a importância de definir objetivos claros, ambiciosos e mensuráveis para orientar a inovação, metas #emph[moonshot];.
+O conceito de "#emph[missões];" em políticas públicas tem sido popularizado pela economista Mariana Mazzucato#footnote[O Nova Indústria Brasil, proposta do governo para reverter a desindustrialização precoce do país, é inspirada nas ideias de Mazzucato \(vide #cite(<investnewsNIB>) e #cite(<cartaNIB>);).];. Ela destaca a importância de definir objetivos claros, ambiciosos e mensuráveis para orientar a inovação, metas #emph[moonshot] #cite(<Mazzucato2022>);.
 
 #block(
 fill:yellow.lighten(90%),
@@ -597,7 +586,7 @@ A ambição de uma meta #emph[moonshot] envolve essencialmente risco. Elas defin
 Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que mudança é feita por pessoas e que as pessoas são motivadas por propósitos \(@fig-danpink). Para criar um ambiente em que os indivíduos se auto-motivem, é importante criar uma cultura organizacional adequada. Para isso, é importante pensar em governança.
 
 #figure([
-#box(width: 90%,image("images/alinha_autonomia.svg"))
+#box(width: 70%,image("images/alinha_autonomia.svg"))
 ], caption: figure.caption(
 position: bottom, 
 [
@@ -616,14 +605,14 @@ A relação entre #emph[alinhamento] e #emph[autonomia] entre equipes e pessoas 
 
 Muros organizacionais \(@sec-prisao) favorecem o surgimento de #emph[autocracia] dentro dos silos e #emph[anarquia] entre silos.
 
-O ideal é uma cultura ágil, de muito alinhamento e muita autonomia, que propicia decisões rápidas, bem embasadas e invadoras. Para tanto, é preciso romper com silos e montar equipes multifuncionais, autônomas e responsáveis por um ou mais serviços do início ao fim e alinhadas à estragégia maior.
+O ideal é uma cultura ágil, de muito alinhamento e muita autonomia, que propicia decisões rápidas, bem embasadas e inovadoras. Para tanto, é preciso romper com silos e montar equipes multifuncionais, autônomas e responsáveis por um ou mais serviços do início ao fim e alinhadas à estragégia maior.
 
 #figure([
 #box(width: 90%,image("images/missao.svg"))
 ], caption: figure.caption(
 position: bottom, 
 [
-O arcabouço socio-técnico
+O arcabouço sociotécnico
 ]), 
 kind: "quarto-float-fig", 
 supplement: "Figure", 
@@ -638,7 +627,7 @@ A análise do problema torna transparente que além de direcionamento estratégi
 
 === Das minas de carvão de Yorkshire ao Spotify
 <das-minas-de-carvão-de-yorkshire-ao-spotify>
-No final dos anos 1940, o carvão era a principal fonte de energia da Inglaterra. Para apoiar a recostrução industrial pós-guerra, era essencial aumentar a sua produção e reduzir custos. Com esse intuito, introduziram-se novas máquinas nas minas de Yorkshire. A produtividade, contudo, diminuiu.
+No final dos anos 1940, o carvão era a principal fonte de energia da Inglaterra. Para apoiar a reconstrução industrial pós-guerra, era essencial aumentar a sua produção e reduzir custos. Com esse intuito, introduziram-se novas máquinas nas minas de Yorkshire. A produtividade, contudo, diminuiu.
 
 Chamados para investigar o problema, pesquisadores do Instituto Tavistock descobriram que as novas máquinas alteraram a dinâmica e cooperação entre os mineiros, que antes trabalhavam em equipes multifuncionais e autônomas com foco na resolução de problemas e alto grau de adaptabilidade.
 
@@ -682,7 +671,7 @@ align(center)[#table(
 <devops-abordagem-sociotécnica-no-desenvolvimento-de-software>
 No início do milênio, a prestação de serviços via web começou a se sofisticar e #emph[sites] passaram a ficar cada vez mais parecidos com #emph[aplicações];.
 
-Em grande medida, a #emph[web];, que foi criada como uma plataforma para publicação e consumo de documentos \(páginas), é um ambiente hostil para desenvolvimento de \_aplicações. Desenvolver #emph[webapps] envolve coordenar trabalhos muito distintos que vão desde aspectos visuais e de usabilidade \(UI/UX), lidar com a diversidade de navegadores e suas respectivas compatibilidades tecnológicas, interoperabilidade com bancos de dados e sistemas de terceiro e questões de manutenção da infra-estrutura.
+Em grande medida, a #emph[web];, que foi criada como uma plataforma para publicação e consumo de documentos \(páginas), é um ambiente hostil para desenvolvimento de \_aplicações. Desenvolver aplicações web requer a coordenação de tarefas variadas e complexas. Incluindo design de interfaces visuais e a experiência do usuário \(UI/UX), gestão da compatibilidade entre diferentes navegadores, a garantia de interoperabilidade com bancos de dados e sistemas de terceiros, além de cuidar da manutenção da infraestrutura.
 
 A entrega de valor acontece quando novas #emph[funcionalidades] são publicadas e usadas pelos usuários. A evolução do serviço e ganho de competitividade depende de acelerar o ciclo de lançamento, análise e aprendizado. Ainda assim, mesmo entre os líderes de mercado, este era um processo lento, arriscado e custoso e o desenvolvimento de aplicações web envolvia lidar com diversos desafios:
 
@@ -698,36 +687,29 @@ A entrega de valor acontece quando novas #emph[funcionalidades] são publicadas 
 
 + #strong[Resistência à Mudança];: Existia uma resistência cultural significativa à mudança dentro das organizações. Isso incluía a hesitação em adotar novas tecnologias e práticas, bem como a dificuldade em quebrar os silos organizacionais existentes.
 
-Por volta dos anos 2000, a Amazon implantava melhoria em sua plataforma de e-commerce em ciclos que duravam de muitos meses e até anos. Já em 2015, o varejista implantava mais de 50 milhões de melhorias por ano \(uma implantação por segundo)#cite(<HowAmazon>);. Em 15 anos a empresa mudou totalmente os seus processos e as inovações criadas no processo deram origem a todo uma nova linha de negócios, a AWS \(Amazon Web Services).
+Por volta dos anos 2000, a Amazon implantava melhoria em sua plataforma de e-commerce em ciclos que duravam de muitos meses e até anos. Já em 2015, o varejista implantava mais de 50 milhões de melhorias por ano \(uma implantação por segundo) #cite(<HowAmazon>);. Em 15 anos a empresa mudou totalmente os seus processos e as inovações criadas no processo deram origem a toda uma nova linha de negócios, a AWS \(Amazon Web Services).
 
 O lançamento do #emph[framework] Rails em 2004 é um marco na trajetória de disseminação de práticas culturais para o desenvolvimento de aplicações web. Surge a ideia de #strong[convenção sobre configuração];, ou seja, a adoção de padrões de processo que tornam possível automatizar tarefas do desenvolvimento.
 
 Já no final dos anos 2000, início dos anos 2010, os aspectos sociotécnicos começaram a ser disseminados e conhecidos como #strong[DevOps] a integração dos silos de desenvolvimento e operações.
 
-Hoje o desenvolvimento web é muito mais engenharia que arte e processos de:
+Hoje o desenvolvimento web é muito mais engenharia que arte. Já estão bastante disseminados em toda a indústria processos de: - controle de versão; - testes automatizados; - integração contínua \(Continuous Integration, CI); - implantação contínua \(Continuous Deployment, CD).
 
-- contole de versão;
-- testes automatizados;
-- integração contínua \(Continuous Integration, CI);
-- implantação contínua \(Continuous Deployment, CD);
-
-estão bastante disseminados em toda a indústria.
-
-=== DataOps: Abordagem socio-técnica para Dados
-<dataops-abordagem-socio-técnica-para-dados>
-Nos últimos poucos anos, as equipes responsáveis de gestão e análise de dados despertaram para as vantagens da abordagem socio-técnica e começaram a desenvolver e disseminar metodologia ágeis similares ao DevOps. Esse movimento passou a ser chamado #strong[DataOps];.
+=== DataOps: Abordagem sociotécnica para Dados
+<dataops-abordagem-sociotécnica-para-dados>
+Nos últimos poucos anos, as equipes responsáveis de gestão e análise de dados despertaram para as vantagens da abordagem sociotécnica e começaram a desenvolver e disseminar metodologia ágeis similares ao DevOps. Esse movimento passou a ser chamado #strong[DataOps];.
 
 == Arcabouço Data Mesh
 <arcabouço-data-mesh>
 O presente projeto pretende aplicar uma metodologia sociotécnica chamada #strong[Data Mesh];, proposta por Zhamak Dehghani em 2019 e adotada por empresas como Netflix e PayPal.
 
-Data Mesh propõe uma arquitetura de dados descentralizada, com foco no design orientado ao domínio e auto-serviço. Inspirado em teorias de design orientado ao domínio e topologias de equipe, o Data Mesh busca escalar a análise de dados através da descentralização, transferindo a responsabilidade dos dados de equipes especialistas em dados para as equipes de domínio \(áreas de negócio), com suporte de uma equipe de plataforma de dados.
+Data Mesh propõe uma arquitetura de dados descentralizada, com foco no design orientado ao domínio e autosserviço. Inspirado em teorias de design orientado ao domínio e topologias de equipe, o Data Mesh busca escalar a análise de dados através da descentralização, transferindo a responsabilidade dos dados de equipes especialistas em dados para as equipes de domínio \(áreas de negócio), com suporte de uma equipe de plataforma de dados.
 
-Data Mesh é baseada em quadtro princípios fundamentais:
+Os quatro princípios fundamentais do Data Mesh são:
 
 + Dados como Produto;
 + Propriedade do Domínio;
-+ Plataforma Auto-Serviço de Dados;
++ Plataforma Autosserviço de Dados;
 + Governança Compartilhada.
 
 === Dados como Produto
@@ -742,13 +724,13 @@ align(center)[#table(
   align: (col, row) => (left,left,).at(col),
   inset: 6pt,
   [Princípio FAIR], [Descrição],
-  [Localizável],
+  [Localizável \(#strong[F];indable)],
   [Os dados devem ser facilmente descobertos e endereçáveis tanto por humanos quanto por computadores.],
-  [Acessível],
+  [Acessível \(#strong[A];ccessible)],
   [Os dados devem ser nativamente acessíveis e independentes de sistemas e formatos, permitindo o acesso através de diversas plataformas e ferramentas.],
-  [Interoperável],
+  [Interoperável \(#strong[I];nteroperable)],
   [Os dados devem ser capazes de se integrar com outros conjuntos de dados, aplicações e processos de trabalho para análise, armazenamento e processamento.],
-  [Reutilizável],
+  [Reutilizável \(#strong[R];eusable)],
   [Os dados devem possuir valor intrínseco, ser confiáveis e estruturados de forma que suportem sua reutilização em diferentes contextos.],
 )]
 )
@@ -772,17 +754,17 @@ Este princípio enfatiza a importância de manter padrões e políticas de dados
 
 Além de facilitar a interoperabilidade e automação, a adoção de #strong[convenções] facilita a comunicação entre equipes e reduz a quantidade de decisões de pouca relevância que precisam ser tomadas.
 
-No contexto deste projeto, além de buscar criar políticas de governança compartilhadas entre as coordenações da DESID, buscaremos alinhar nossas políticas a outras áreas como o DEMAS e às políticas da Infra-estrutura Nacional de Dados Abertos \(INDA).
+No contexto deste projeto, além de buscar criar políticas de governança compartilhadas entre as coordenações da DESID, buscaremos alinhar nossas políticas a outras áreas como o Departamento de Monitoramento, Avaliação e Disseminação de Informações Estratégicas em Saúde \(DEMAS) e às políticas da Infraestrutura Nacional de Dados Abertos \(INDA).
 
-=== Infra-estrutura de auto-serviço
-<infra-estrutura-de-auto-serviço>
-A ideia de uma plataforma de dados auto-serviço é fornecer às equipes as ferramentas e capacidades necessárias para acessar, manipular e analisar dados sem depender excessivamente de suporte técnico especializado. Isso democratiza o acesso aos dados e capacita os usuários finais, permitindo que eles realizem tarefas de dados de forma independente, com agilidade e eficiência. Essas plataformas são projetadas para serem intuitivas e fáceis de usar, reduzindo barreiras para o trabalho com dados.
+=== Infraestrutura de autosserviço
+<infraestrutura-de-autosserviço>
+A ideia de uma plataforma de dados autosserviço é fornecer às equipes as ferramentas e capacidades necessárias para acessar, manipular e analisar dados sem depender excessivamente de suporte técnico especializado. Isso democratiza o acesso aos dados e capacita os usuários finais, permitindo que eles realizem tarefas de dados de forma independente, com agilidade e eficiência. Essas plataformas são projetadas para serem intuitivas e fáceis de usar, reduzindo barreiras para o trabalho com dados.
 
-No contexto deste projeto, será desenvolvida uma plataforma auto-serviço de análise de dados para o DESID baseada em ferramentas open-source: DESID Playground. O #strong[DESID Playground] éum dos principais entregáveis do projeto.
+No contexto deste projeto, será desenvolvida uma plataforma autosserviço de análise de dados para o DESID baseada em ferramentas open-source: DESID Playground. O #strong[DESID Playground] é um dos principais entregáveis do projeto.
 
 == Critérios de Sucesso
 <critérios-de-sucesso>
-O conceito de nível de maturidade é aplicada por diferentes governos e organizações para avaliar qualitativamente a eficácia das práticas de gestão e análise de dados e monitorar a evolução desses processos. À medida que uma organização avança nos níveis de maturidade, ela implementa práticas de governança de dados mais formalizadas e padronizadas, alcançando maior eficiência, qualidade dos dados e capacidade de inovação.
+O conceito de nível de maturidade é aplicado por diferentes governos e organizações para avaliar qualitativamente a eficácia das práticas de gestão e análise de dados e monitorar a evolução desses processos. À medida que uma organização avança nos níveis de maturidade, ela implementa práticas de governança de dados mais formalizadas e padronizadas, alcançando maior eficiência, qualidade dos dados e capacidade de inovação.
 
 #figure(
 align(center)[#table(
@@ -815,11 +797,10 @@ A auto-avaliação inicial é um dos entregáveis da próxima etapa do projeto;
 
 == Gestão de Projeto
 <gestão-de-projeto>
-A gestão do projeto será livremente inspirada na metodologia ágil Scrum:
+A gestão do projeto adotará práticas inspiradas na metodologia ágil Scrum, incluindo:
 
 - #emph[sprints] de 2 a 3 semanas para cada domínio;
 - uma reunião de retrospectiva da #emph[sprint] anterior e planejamento da próxima #emph[sprint];;
-- sem reuniões de alinhamento diário;
 
 = Resultados
 <sec-result>

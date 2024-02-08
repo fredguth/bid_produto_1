@@ -1,7 +1,7 @@
 ---
 title: Plano de Trabalho
 subtitle: |
-  Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde
+  Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia e Desenvolvimento em Saúde
 lang: pt-br
 author:
   - name: Frederico Guth
@@ -10,35 +10,42 @@ author:
     affiliations:
       - BID
     role: Autor
-  - name: Gabriel Squeff
-    email: gabriel.squeff@saude.gov.br
-    affiliations:
-      - CGES/DESID/MS
-    role: Responsável
 keywords:
   - Plano de Trabalho
   - Produto 1
   - Cooperação Técnica BR-T1550 (BID/MS)
 plain-language-summary: |
   Primeiro produto do Projeto de Consultoria Individual
-date: 2024-02-01
+date: last-modified
 bibliography: references.bib
 funding: |
   Cooperação Técnica BR-T1550 (BID/MS)
 citation:
-  container-title: "Consultoria Individual de Ciência de Dados e Aprendizado de Máquina"
+  container-title: "Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia e Desenvolvimento em Saúde"
   type: report
   language: pt-br
   author: Frederico Guth
   editor: Gabriel Squeff
-  issued: 2024-02-01
+  issued: 2024-02-08
   number: 1
   producer:  "Cooperação Técnica BR-T1550 (BID/MS)"
 
 iadb:
   contract: Cooperação Técnica BR-T1550 (BID/MS)
-  project: Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde
+  project: Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia e Desenvolvimento em Saúde
   product: Produto 1
+  people: 
+      - name: Frederico Guth
+        corresponding: true
+        email: frederico.guth@saude.gov.br
+        affiliations:
+          - BID
+        role: Autor
+      - name: Gabriel Squeff
+        email: gabriel.squeff@saude.gov.br
+        affiliations:
+        - CGES/DESID/MS
+        role: Responsável
 
 number-sections: true
 jupyter: python3
@@ -50,27 +57,22 @@ nameref:
 ---
 
 ## Introdução {#sec-intro}
-O presente projeto é uma iniciativa de 12 meses no âmbito da _Cooperação Técnica BR-T1550_ do Ministério da Saúde com o Banco Inter-americano de Desenvolvimento (BID). Seu objetivo maior é fortalecer a capacidade de análise de dados do Departamento de Economia da Saúde, Investimento e Desempenho (DESID/MS), integrando técnicas avançadas de ciência de dados e preparando a organização para a adoção de modelos de inteligência artificial.
+O presente projeto é uma iniciativa de 12 meses no âmbito da _Cooperação Técnica BR-T1550_ do Ministério da Saúde com o Banco Inter-americano de Desenvolvimento (BID). Seu objetivo maior é fortalecer a capacidade de análise de dados do Departamento de Economia e Desenvolvimento em Saúde (DESID/MS), integrando técnicas avançadas de ciência de dados e preparando a organização para a adoção de modelos de inteligência artificial.
 
 ### Motivação
 
 
-![Sistemas são meios e não fins.](images/pratos.svg){.column-margin .lightbox fig-alt="jogador equilibrando pratos e perdendo gols" width=80% #fig-pratos}
+![Sistemas são meios e não fins. (Todas imagens desse relatório são do próprio autor, exceto quando explicitado em contrário.)](images/pratos.svg){.column-margin .lightbox fig-alt="jogador equilibrando pratos e perdendo gols" width=80% #fig-pratos}
 
 A Coordenação-Geral de Informações em Economia da Saúde (CGES/DESID) é uma área multidiprofissional e interdisciplinar responsável por importantes sistemas de registro de informações econômicas de saúde (SIOPS, BPS e ApuraSUS) e pelo uso desses dados para fornecer evidências econômicas para formulação de políticas, diretrizes e metas para a contínua melhoria do Sistema Único de Saúde (SUS).
 
-> Os sistemas não são fins em si mesmos.  Mais Economia!
-> 
-> --- Gabriel Squeff
->
-
-Desde o início de 2023, a CGES tem investido em melhorias para automatizar e reduzir esforços na obtenção dos registros e aumentar a produção de evidências econômicas baseadas na análise de dados. Tais evidências são a missão principal da DESID e subsidiam a formulação de políticas, diretrizes e metas para que as ações e serviços de saúde sejam  prestados de forma eficiente, equitativa e com qualidade para melhor acesso da população, atendendo aos princípios da universalidade, igualdade e integralidade da atenção à saúde estabelecidos constitucionalmente para o Sistema Único de Saúde (SUS).
+Desde o início de 2023, a CGES tem investido em melhorias para automatizar e reduzir esforços na obtenção dos registros e aumentar a produção de evidências econômicas baseadas na análise de dados. Tais evidências são a missão principal da DESID e subsidiam a formulação de políticas, diretrizes e metas para que as ações e serviços públicos de saúde sejam  prestados de forma eficiente, equitativa e com qualidade para melhor acesso da população, atendendo aos princípios da universalidade, igualdade e integralidade da atenção à saúde estabelecidos constitucionalmente para o Sistema Único de Saúde (SUS).
 
 A coordenação identificou a necessidade urgente e prioritária de fortalecer suas capacidades de análise de dados, uma vez que conta atualmente com reduzida equipe especializada na área, a maior parte das análises ainda é realizada apenas em planilhas e os processos de ingestão e transformação de dados são _ad-hoc_ e não institucionalizados. 
 
 Essa necessidade se torna ainda mais crítica com a responsabilidade assumida pela CGES na produção futura do Sistema de Contas de Saúde (SHA), em cooperação com a a Organização para a Cooperação e Desenvolvimento Econômico (OCDE) e outras instituições governamentais brasileiras.
 
-Por esses motivo, a CGES está criando o Núcleo de Engenharia de Dados da DESID (NErD) que o presente projeto ajudará a organizar.
+Por esses motivo, a CGES está criando o Núcleo de Ciência de Dados da DESID (NCD) que o presente projeto ajudará a organizar.
 
 ### Objetivos do Projeto
 
@@ -85,7 +87,7 @@ Por esses motivo, a CGES está criando o Núcleo de Engenharia de Dados da DESID
 - Desenvolvimento de plano de infraestrutura técnica e capacitação da equipe.
 - Desenvolvimento de metodologia de desenvolvimento de produtos de dados.
 - Desenvolvimento de proposta de portfólio de produtos de dados.
-- Desenvolvimento de produtos de dados: esteiras de dados, relatórios, indicadores, datasets etc.
+- Desenvolvimento de produtos de dados: datasets, esteiras de dados, relatórios, painéis etc.
 
 
 ### Este documento
@@ -93,7 +95,7 @@ Por esses motivo, a CGES está criando o Núcleo de Engenharia de Dados da DESID
 | | | 
 | :----------:|:-------------------|
 | **Contrato** | Cooperação Técnica BR-T1550 |
-| **Projeto** | Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia da Saúde, Investimento e Desempenho do Ministério da Saúde |
+| **Projeto** | Consultoria Individual de Ciência de Dados e Aprendizado de Máquina no Departamento de Economia e Desenvolvimento em Saúde do Ministério da Saúde |
 | **Produto** | Entregável 1 - Plano de Trabalho |
 
 
@@ -126,10 +128,9 @@ Estima-se que o investimento em ferramentas analíticas tenha superado 80 bilhõ
 
 :::::
 
+![Investimento em capacidade tecnológica, ferramentas e _know-how_ é condição necessária mas não suficiente para se tornar _data-driven_.](images/missing_leg.svg){.column-margin .lightbox #fig-missing-leg width=90%}
 
 Entender por que tantas implantações de plataformas de dados não entregam os resultados esperados é essencial para assegurar o sucesso deste projeto. 
-
-![Investimento em capacidade tecnológica, ferramentas e _know-how_ é condição necessária mas não suficiente para se tornar _data-driven_.](images/missing_leg.svg){.column-margin .lightbox #fig-missing-leg width=90%}
 
 Em nossa experiência, muitos projetos pecam por acreditar que basta investimento em tecnologia.  Investimento em capacidade tecnológica, ferramentas e _know-how_, é condição necessária mas não suficiente para uma organização se tornar _data-driven_ [@fig-missing-leg].
 
@@ -190,7 +191,9 @@ Em certa medida, a organização em silos produz a antítese das condições par
 #### Evolução orientada a missões {#sec-missoes}
 A gestão orientada a evidências estabelece apenas o método da resposta, mas não o que perguntar, para onde evoluir. Para isso é primordial definir escolhas estratégicas, decisões políticas.
 
-O conceito de "_missões_" em políticas públicas tem sido popularizado pela economista Mariana Mazzucato [@Mazzucato2022]. Ela destaca a importância de definir objetivos claros, ambiciosos e mensuráveis para orientar a inovação, metas _moonshot_.
+O conceito de "_missões_" em políticas públicas tem sido popularizado pela economista Mariana Mazzucato[^nib]. Ela destaca a importância de definir objetivos claros, ambiciosos e mensuráveis para orientar a inovação, metas _moonshot_ [@Mazzucato2022].
+
+[^nib]: O Nova Indústria Brasil, proposta do governo para reverter a desindustrialização precoce do país, é inspirada nas ideias de Mazzucato (vide @investnewsNIB e @cartaNIB).
 
 ::::: {.block fill="yellow.lighten(90%)" outset="1em" radius="6pt" #quadro-plataformas width=70%}
 
@@ -212,7 +215,7 @@ A ambição de uma meta _moonshot_ envolve essencialmente risco. Elas definem co
 Uma grande contribuição do arcabouço de missões apresentado por Mazzucato é lembrar no debate econômico que mudança é feita por pessoas e que as pessoas são motivadas por propósitos (@fig-danpink).
 Para criar um ambiente em que os indivíduos se auto-motivem, é importante criar uma cultura organizacional adequada. Para isso, é importante pensar em governança.
 
-![Governança: Alinhamento e Autonomia.](images/alinha_autonomia.svg){.lightbox fig-alt="gráfico relacionando alinhamento com autonomia" width=90% #fig-governanca fig-align="center"}
+![Governança: Alinhamento e Autonomia.](images/alinha_autonomia.svg){.lightbox fig-alt="gráfico relacionando alinhamento com autonomia" width=70% #fig-governanca fig-align="center"}
 
 
 Governança é o conjunto de políticas, procedimentos, padrões e responsabilidades estabelecidos para orientar e monitorar a gestão e o uso de recursos (incluindo dados, tecnologia e processos) de maneira eficaz e alinhada com os objetivos da organização. A governança garante que haja clareza nas decisões, responsabilidades e que os riscos sejam gerenciados adequadamente, protegendo os interesses de todas as partes envolvidas.
@@ -285,14 +288,12 @@ O lançamento do _framework_ Rails em 2004 é um marco na trajetória de dissemi
 
 Já no final dos anos 2000, início dos anos 2010, os aspectos sociotécnicos começaram a ser disseminados e conhecidos como **DevOps** a integração dos silos de desenvolvimento e operações. 
 
-Hoje o desenvolvimento web é muito mais engenharia que arte e processos de:
-
+Hoje o desenvolvimento web é muito mais engenharia que arte. Já estão bastante disseminados em toda a indústria processos de:
 - controle de versão;
 - testes automatizados;
 - integração contínua (Continuous Integration, CI);
-- implantação contínua (Continuous Deployment, CD);
+- implantação contínua (Continuous Deployment, CD).
 
-estão bastante disseminados em toda a indústria.
 
 #### DataOps: Abordagem sociotécnica para Dados
 Nos últimos poucos anos, as equipes responsáveis de gestão e análise de dados despertaram para as vantagens da abordagem sociotécnica e começaram a desenvolver e disseminar metodologia ágeis similares ao DevOps. Esse movimento passou a ser chamado **DataOps**.
@@ -317,12 +318,12 @@ Encarar os dados como um produto implica tratá-los com o mesmo nível de cuidad
 Um dado tem valor quando usado e para que seja usado ele precisa ter algumas características identificadas pelo acrônimo _FAIR_:
 
 
-| Princípio FAIR   | Descrição                                        |
-|:------------------|:--------------------------------------------------|
-| Localizável      | Os dados devem ser facilmente descobertos e endereçáveis tanto por humanos quanto por computadores. |              
-| Acessível        | Os dados devem ser nativamente acessíveis e  independentes de sistemas e formatos, permitindo o acesso através de diversas plataformas e  ferramentas.    |
-| Interoperável    | Os dados devem ser capazes de se integrar com  outros conjuntos de dados, aplicações e  processos de trabalho para análise, armazenamento e processamento. |
-| Reutilizável     | Os dados devem possuir valor intrínseco, ser confiáveis e estruturados de forma que suportem sua reutilização em diferentes contextos.|        
+| Princípio FAIR| Descrição                                        |
+|:---------------|:--------------------------------------------------|
+| Localizável \(**F**indable)     | Os dados devem ser facilmente descobertos e endereçáveis tanto por humanos quanto por computadores. |              
+| Acessível \(**A**ccessible)        | Os dados devem ser nativamente acessíveis e  independentes de sistemas e formatos, permitindo o acesso através de diversas plataformas e  ferramentas.    |
+| Interoperável  \(**I**nteroperable) | Os dados devem ser capazes de se integrar com  outros conjuntos de dados, aplicações e  processos de trabalho para análise, armazenamento e processamento. |
+| Reutilizável  \(**R**eusable)  | Os dados devem possuir valor intrínseco, ser confiáveis e estruturados de forma que suportem sua reutilização em diferentes contextos.|        
 
 
 Além dessas características, é importante a _codificação_ de todo o processo de transformação dos dados, o que permite a criação de processos automáticos de documentação, testes e publicação dos dados.
@@ -343,7 +344,7 @@ Este princípio enfatiza a importância de manter padrões e políticas de dados
 
 Além de facilitar a interoperabilidade e automação, a adoção de **convenções** facilita a comunicação entre equipes e reduz a quantidade de decisões de pouca relevância que precisam ser tomadas.
 
-No contexto deste projeto, além de buscar criar políticas de governança compartilhadas entre as coordenações da DESID, buscaremos alinhar nossas políticas a outras áreas como o DEMAS e às políticas da Infraestrutura Nacional de Dados Abertos (INDA).
+No contexto deste projeto, além de buscar criar políticas de governança compartilhadas entre as coordenações da DESID, buscaremos alinhar nossas políticas a outras áreas como o Departamento de Monitoramento, Avaliação e Disseminação de Informações Estratégicas em Saúde (DEMAS) e às políticas da Infraestrutura Nacional de Dados Abertos (INDA).
 
 #### Infraestrutura de autosserviço
 A ideia de uma plataforma de dados autosserviço é fornecer às equipes as ferramentas e capacidades necessárias para acessar, manipular e analisar dados sem depender excessivamente de suporte técnico especializado. Isso democratiza o acesso aos dados e capacita os usuários finais, permitindo que eles realizem tarefas de dados de forma independente, com agilidade e eficiência. Essas plataformas são projetadas para serem intuitivas e fáceis de usar, reduzindo barreiras para o trabalho com dados.
@@ -373,8 +374,6 @@ A gestão do projeto adotará práticas inspiradas na metodologia ágil Scrum, i
 
 - _sprints_ de 2 a 3 semanas para cada domínio;
 - uma reunião de retrospectiva da _sprint_ anterior e planejamento da próxima _sprint_;
-- omitindo reuniões de alinhamento diário;
-
 
 <!-- ### Riscos e Mitigações
 - falta ferramentas básicas de colaboração e gestão
@@ -414,17 +413,14 @@ A gestão do projeto adotará práticas inspiradas na metodologia ágil Scrum, i
 - Auto-avaliação do nível de maturidade
 
 
-
-
 ### Cronograma
 
-:::{.column-page}
+:::::{.column-page-right}
 ```{mermaid}
 gantt
   
   tickInterval 1month
   todayMarker off
-  
 
   title Projeto de Desenvolvimento de Produtos de Dados
   dateFormat  YYYY-MM-DD
@@ -456,7 +452,7 @@ gantt
     Apresentação :after a4, 2024-12-06
 ```
 
-:::
+:::::
 
 ## Conclusão {#sec-conclusao}
 
