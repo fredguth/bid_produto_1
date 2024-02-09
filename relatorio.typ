@@ -249,7 +249,7 @@
           );
         ]
      } 
-      place(dy:6.5cm, block(fill: blue.lighten(95%),width: 100%,inset: 1em,radius: 6pt)[
+      place(dy:10cm, block(fill: blue.lighten(95%),width: 100%,inset: 1em,radius: 6pt)[
         #for (author) in authors [
           #if author.role!= none [*#author.role*]
 
@@ -324,11 +324,11 @@ O presente projeto é uma iniciativa de 12 meses no âmbito da #emph[Cooperaçã
 == Motivação
 <motivação>
 #figure([
-#box(width: 80%,image("images/pratos.svg"))
+#box(width: 70%,image("images/pratos.svg"))
 ], caption: figure.caption(
 position: bottom, 
 [
-Sistemas são meios e não fins. \(Todas imagens desse relatório são do próprio autor, exceto quando explicitado em contrário.)
+Sistemas são meios e não fins. \ Todas imagens desse relatório são do próprio autor, \ exceto quando explicitado em contrário.
 ]), 
 kind: "quarto-float-fig", 
 supplement: "Figure", 
@@ -391,22 +391,21 @@ O presente #emph[Plano de Trabalho] tem como objetivos:
 <sec-metodo>
 == Contexto
 <contexto>
-#figure([
-#box(width: 12083.0pt, image("images/MAD2023.png"))
-], caption: figure.caption(
-position: bottom, 
-[
-A imensidão do confuso mercado de ferramentas analíticas.
-]), 
-kind: "quarto-float-fig", 
-supplement: "Figure", 
-)
+
+
+
+
+#block[#box(width: 7.5in, figure(
+  image("images/MAD-2.png"),
+  caption: [A imensidão do confuso mercado de ferramentas analíticas.],
+))]
 
 
 Estima-se que o investimento em ferramentas analíticas tenha superado 80 bilhões de dólares em 2023#cite(<snowflake2020s1>);. Muitas organizações já estão na terceira geração de suas #emph[plataformas de dados];, com a esperança de obter #emph[insights] e tomar decisões rápidas baseadas em evidências. Poucas, porém, podem se dizer verdadeiramente #emph[data-driven];.
 
 #block(
 fill:yellow.lighten(90%),
+above: 2em, below: 2em,
 outset:1em,
 radius:6pt,
 width:70%,
@@ -424,7 +423,7 @@ width:70%,
 ])
 
 #figure([
-#box(width: 90%,image("images/missing_leg.svg"))
+#box(width: 70%,image("images/missing_leg.svg"))
 ], caption: figure.caption(
 position: bottom, 
 [
@@ -448,7 +447,7 @@ Para compreensão do método a ser adotado no presente projeto, partiremos da de
 === Servir, Aprender e Evoluir
 <servir-aprender-e-evoluir>
 #figure([
-#box(width: 90%,image("images/servico.svg"))
+#box(width: 70%,image("images/servico.svg"))
 ], caption: figure.caption(
 position: bottom, 
 [
@@ -467,6 +466,7 @@ Cada #emph[transação] #footnote[Uma transação é uma execução do serviço,
 
 #block(
 fill:yellow.lighten(90%),
+above: 2em, below: 2em,
 outset:1em,
 radius:6pt,
 width:70%,
@@ -478,7 +478,7 @@ width:70%,
 ])
 
 #figure([
-#box(width: 50%,image("images/evolucao.svg"))
+#box(width: 40%,image("images/evolucao.svg"))
 ], caption: figure.caption(
 position: bottom, 
 [
@@ -495,19 +495,6 @@ O #emph[feedback] do usuário, direto e indireto \(via indicadores), fornece inf
 
 === Desafios Organizacionais
 <sec-prisao>
-#figure([
-#box(width: 90%,image("images/grinder.png"))
-], caption: figure.caption(
-position: bottom, 
-[
-O "sistema" moendo pessoas. Arte de #emph[Gerald Scarfe] para o filme #emph[The Wall] \(1982).
-]), 
-kind: "quarto-float-fig", 
-supplement: "Figure", 
-numbering: "1", 
-)
-<fig-grinder>
-
 
 #quote(block: true)[
 "Nos primeiros quatro meses de 2023, mais de 10,3 mil servidores \[1/3 do quadro\] da Secretaria de Saúde do Distrito Federal \(SES-DF) precisaram de atestados de afastamento do trabalho. Grande parte desses servidores são técnicos em enfermagem" – #cite(<Schwingel2023>);.
@@ -516,7 +503,19 @@ numbering: "1",
 Organizações doentes adoecem pessoas. No serviço público, são servidoras #emph[da ponta];, que tem contato direto com usuário, as que mais adoecem. #emph[O que está acontecendo?]
 
 #figure([
-#box(width: 90%,image("images/paredes3.svg"))
+#box(width: 50%,image("images/grinder.png"))
+], caption: figure.caption(
+position: bottom, 
+[
+O "sistema" moendo pessoas. \ Arte de #emph[Gerald Scarfe] para o filme #emph[The Wall] \(1982).
+]), 
+kind: "quarto-float-fig", 
+supplement: "Figure", 
+numbering: "1", 
+)
+<fig-grinder>
+#figure([
+#box(width: 50%,image("images/paredes3.svg"))
 ], caption: figure.caption(
 position: bottom, 
 [
@@ -540,11 +539,11 @@ O servidor na ponta está preso entre a realidade e o muro organizacional.
 ]
 
 #figure([
-#box(width: 90%,image("images/danpink3.svg"))
+#box(width: 50%,image("images/danpink3.svg"))
 ], caption: figure.caption(
 position: bottom, 
 [
-Auto-motivação segundo Dan Pink \(Figura inspirada em #emph[\@sketchplanations];)
+Auto-motivação segundo Dan Pink \ (Figura inspirada em #emph[\@sketchplanations];)
 ]), 
 kind: "quarto-float-fig", 
 supplement: "Figure", 
@@ -565,6 +564,7 @@ O conceito de "#emph[missões];" em políticas públicas tem sido popularizado p
 
 #block(
 fill:yellow.lighten(90%),
+above: 2em, below: 2em,
 outset:1em,
 radius:6pt,
 width:70%,
@@ -608,7 +608,7 @@ Muros organizacionais \(@sec-prisao) favorecem o surgimento de #emph[autocracia]
 O ideal é uma cultura ágil, de muito alinhamento e muita autonomia, que propicia decisões rápidas, bem embasadas e inovadoras. Para tanto, é preciso romper com silos e montar equipes multifuncionais, autônomas e responsáveis por um ou mais serviços do início ao fim e alinhadas à estragégia maior.
 
 #figure([
-#box(width: 90%,image("images/missao.svg"))
+#box(width: 50%,image("images/missao.svg"))
 ], caption: figure.caption(
 position: bottom, 
 [
@@ -883,23 +883,24 @@ Esperamos contribuir para uma evolução nas práticas, processos e ferramentas 
 
 A descrição dos entregáveis e o cronograma apresentado reflete a nossa melhor estimativa para a conclusão das etapas planejadas. No entanto, caso identifiquemos oportunidades para adiantar as entregas sem comprometer a qualidade, certamente o faremos. Este compromisso não apenas reflete a nossa dedicação em atingir os objetivos estabelecidos, mas também em superar as expectativas da equipe.
 
+// #block[
+// #heading(
+// level: 
+// 1
+// , 
+// numbering: 
+// none
+// , 
+// [
+// Bibliografia
+// ]
+// )
+// ]
 #block[
-#heading(
-level: 
-1
-, 
-numbering: 
-none
-, 
-[
-Bibliografia
-]
-)
-]
-#block[
+  #bibliography("references.bib")
 ] <refs>
 
 
 
-#bibliography("references.bib")
+
 
